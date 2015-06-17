@@ -43,6 +43,16 @@ app.controller('MainController', ['$scope', function($scope) {
 	    
 	  },
 	  { 
+	    title: 'Tailorbrands - getting information | interaction, expectations', 
+	    link: 'http://www.tailorbrands.com', 
+	    comment: 'better version with actual output',
+	    images: ['img/img13.png',
+	    		  
+	    ],
+	    	
+	    
+	  },
+	  { 
 	    title: 'Coin - Gameing | interaction', 
 	    link: 'http://pttrns.com/applications/402', 
 	    comment: 'Play a game to interact (It triggers affection in the brain. choose your signup pictures at the begiining instead of a pw)',
