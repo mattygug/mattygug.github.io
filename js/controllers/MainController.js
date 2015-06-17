@@ -3,12 +3,10 @@ app.controller('MainController', ['$scope', function($scope) {
 	  
 	  
 	  { 
-	    title: 'Dashmote - getting information, push feeling and raising expectations | interaction, expectation', 
+	    title: 'Dashmote - Getting information, push feeling and raising expectations | interaction, expectation', 
 	    link: 'http://beta.dashmote.com/', 
 	    comment: 'draw back: too complicated, buggy, some features do not make sense',
-	    images: ['img/img06.png',
-	    		'img/img07.png',
-	    		 
+	    images: ['img/img07.png',	 
 	    ],
 	    	
 	    
@@ -17,9 +15,7 @@ app.controller('MainController', ['$scope', function($scope) {
 	    title: 'User Stories & Goals', 
 	    link: '', 
 	    comment: '',
-	    images: ['img/img12.png',
-	    		
-	    		 
+	    images: ['img/img12.png',		 
 	    ],
 	    	
 	    
@@ -27,7 +23,7 @@ app.controller('MainController', ['$scope', function($scope) {
 	  { 
 	    title: '500px - Basics', 
 	    link: 'https://500px.com/signup', 
-	    comment: 'classic onboarding!! We do not want that.',
+	    comment: 'Ouch!! This is the one screen everyone hates on the web',
 	    images: ['img/img03.png',
 	    ],
 	    
@@ -35,7 +31,7 @@ app.controller('MainController', ['$scope', function($scope) {
 	  { 
 	    title: 'DeliAmsterdam - getting information | interaction, expectations', 
 	    link: 'http://www.deliamsterdam.com', 
-	    comment: 'Getting information by choices',
+	    comment: 'A pioneer in sourcing easy infomormation and customizing results for a User. Getting information by choices',
 	    images: ['img/img01.png',
 	    		  'img/img02.png',
 	    ],
@@ -45,9 +41,8 @@ app.controller('MainController', ['$scope', function($scope) {
 	  { 
 	    title: 'Tailorbrands - getting information | interaction, expectations', 
 	    link: 'http://www.tailorbrands.com', 
-	    comment: 'better version with actual output',
-	    images: ['img/img13.png',
-	    		  
+	    comment: 'A better version as DeliAmsterdam with actual output',
+	    images: ['img/img13.png',		  
 	    ],
 	    	
 	    
@@ -56,8 +51,7 @@ app.controller('MainController', ['$scope', function($scope) {
 	    title: 'Coin - Gameing | interaction', 
 	    link: 'http://pttrns.com/applications/402', 
 	    comment: 'Play a game to interact (It triggers affection in the brain. choose your signup pictures at the begiining instead of a pw)',
-	    images: ['img/img04.png',
-	    		 
+	    images: ['img/img04.png',		 
 	    ],
 	    	
 	    
@@ -66,8 +60,7 @@ app.controller('MainController', ['$scope', function($scope) {
 	    title: 'Flickr - Welcome | frictionless simple -> for masses', 
 	    link: 'https://www.flickr.com/', 
 	    comment: 'Basic explanations about product, frictionless',
-	    images: ['img/img05.png',
-	    		 
+	    images: ['img/img05.png',		 
 	    ],
 	    	
 	    
@@ -76,8 +69,7 @@ app.controller('MainController', ['$scope', function($scope) {
 	    title: 'Path - Engage | connect and engage with other users', 
 	    link: 'http://pttrns.com/applications/354', 
 	    comment: 'Personally I am not a fan of this',
-	    images: ['img/img08.png',
-	    		 
+	    images: ['img/img08.png',		 
 	    ],
 	    	
 	    
@@ -86,8 +78,7 @@ app.controller('MainController', ['$scope', function($scope) {
 	    title: 'Bobler - Explain and straight signup | nifty explanations -> simple signup', 
 	    link: 'http://uxarchive.com/apps/bobler', 
 	    comment: 'Simple but engaging',
-	    images: ['img/img09.png',
-	    		 
+	    images: ['img/img09.png',		 
 	    ],
 	    	
 	    
@@ -98,7 +89,6 @@ app.controller('MainController', ['$scope', function($scope) {
 	    comment: 'draw back: too complicated, buggy, some features do not make sense',
 	    images: ['img/img10.png',
 	    		'img/img11.png',
-
 	    		],
 	    	
 	    
