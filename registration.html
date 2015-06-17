@@ -12,17 +12,25 @@
   </head>
   <body ng-app="myApp">
 
-    <div class="main" >
+    <div class="main" ng-controller="MainController">
       <div class="container">
         <div class="row">
-          <a href="registration.html"><h1>Registration pages</h1></a>
+        <h3 style="margin-top: 10vh">Library of registration pages</h3>
+        <h4>An array of registration pages</h4>
+
+          <div class="websites" ng-repeat="website in websites">
+            <a href="{{websites.link}}">
+            <h3>{{website.title }}</h3></a>
+            <h4>{{website.comment}}</h4>
+            <img  class="images" ng-repeat="image in website.images"  ng-src="{{image}}"></img>
+            </div>
               
-            </div> 
-          </div>
+          </div> 
         </div>
-        </ul>
       </div>
+       
     </div>
+  
 
     <!-- Modules -->
     <script src="js/app.js"></script>
