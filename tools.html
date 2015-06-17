@@ -10,24 +10,30 @@
     
     
   </head>
-  <body ng-app="myApp" >
-  <div class="home bg">
+  <body ng-app="myApp">
 
-    <div class="main" >
+    <div class="main" ng-controller="ToolsController">
       <div class="container">
         <div class="row">
-          <h1 style="margin-top:20vh;color:white">mattygug's dollops:</h1>
-          <a  href="tools.html"><h2 style="margin-top:10vh">My favourite tools</h2></a>
-          <h2 style="color:white">UI/UX</h2>
-          <a  href="registration.html"><h3 style="margin-top:10vh">+on registration pages</h3></a>
-              
-            </div> 
-          </div>
+        <h3 style="margin-top: 10vh">Design</h3>
+        <div class="posts" ng-repeat="design in designs">
+            <a href="{{design.link}}">
+            <h3>{{design.title }}</h3></a>
         </div>
-        </ul>
+        <div class="posts" ng-repeat="organization in organizations">
+            <a href="{{organization.link}}">
+            <h3>{{organization.title }}</h3></a>
+        </div>
+        
+        
+
+          
+          </div> 
+        </div>
       </div>
+       
     </div>
-  </div>
+  
 
     <!-- Modules -->
     <script src="js/app.js"></script>
