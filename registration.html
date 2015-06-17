@@ -15,11 +15,12 @@
     <div class="main" ng-controller="MainController">
       <div class="container">
         <div class="row">
-        <h3 style="margin-top: 10vh">Library of registration pages</h3>
+        <h3 style="margin-top: 10vh">library of registration pages</h3>
         <h4>An array of registration pages</h4>
+        <h4>->Registrations are the first touching point!!!</h4>
 
           <div class="websites" ng-repeat="website in websites">
-            <a href="{{websites.link}}">
+            <a href="{{website.link}}">
             <h3>{{website.title }}</h3></a>
             <h4>{{website.comment}}</h4>
             <img  class="images" ng-repeat="image in website.images"  ng-src="{{image}}"></img>
