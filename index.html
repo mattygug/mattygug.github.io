@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <!-- Include the AngularJS library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+    
+  </head>
+  <body ng-app="myApp">
+
+    <div class="main" ng-controller="MainController">
+      <div class="container">
+        <div class="row">
+          <div class="" ng-repeat="website in websites">
+            <a href="{{websites.link}}">
+            <h1>{{website.title }}</h1></a>
+            <h3>{{website.comment}}</h3>
+              
+              <img  ng-repeat="image in website.images" class="images" ng-src="{{image}}"></img>
+              </div>
+              
+            </div> 
+          </div>
+        </div>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Modules -->
+    <script src="js/app.js"></script>
+
+    <!-- Services -->
+    <script src="js/services/test.js"></script>
+    
+    
+
+    <!-- Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+    
+    <!-- Directives -->
+
+
+  </body>
+</html>
