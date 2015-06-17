@@ -14,6 +14,17 @@ app.controller('MainController', ['$scope', function($scope) {
 	    
 	  },
 	  { 
+	    title: 'User Stories & Goals', 
+	    link: '', 
+	    comment: '',
+	    images: ['img/img12.png',
+	    		
+	    		 
+	    ],
+	    	
+	    
+	  },
+	  { 
 	    title: '500px - Basics', 
 	    link: 'https://500px.com/signup', 
 	    comment: 'classic onboarding!! We do not want that.',
