@@ -21,7 +21,7 @@
         <h4>->Something that you have to bare in mind is that the registration is the first actual touching point with the user. The registration interface has to breath the company's values and transmit its storytelling!!!</h4>
 
           <div class="posts" ng-repeat="website in websites">
-            <a href="{{website.link}}">
+            <a target="_blank" href="{{website.link}}">
             <h3>{{website.title }}</h3></a>
             <h4>{{website.comment}}</h4>
             <img  class="images" ng-repeat="image in website.images"  ng-src="{{image}}"></img>

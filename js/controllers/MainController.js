@@ -102,9 +102,28 @@ app.controller('MainController', ['$scope', function($scope) {
 	    comment: 'Drawbacks old: page: ',
 	    images: ['img/img14.png',
 	    		'img/img15.png',
-	    		],
-	    	
+	    		],	
 	    
-	  }, ];
+	}, 
+	{
+	   title: 'User Stories', 
+	    link: '', 
+	    comment: '',
+	    images: ['img/img16.png',
+	    		],	
+	    
+	},
+	{
+	   title: 'Send a gesture: scrolling and moving of hands can be implemented to explain features | interactive', 
+	    link: 'http://sendamessage.to/', 
+	    comment: 'requires good photography work: ',
+	    images: ['img/img17.png',
+	    		
+	    		],	
+	    
+	},
+
+
+	  ];
 
 }]);

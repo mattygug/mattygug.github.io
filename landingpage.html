@@ -21,7 +21,7 @@
         <h4>This is a selling page, we have to transmit the company feeling and provide all the information. (its a showcase). We love landing pages and we want to make a dent.</h4>
 
           <div class="posts" ng-repeat="landing in landings">
-            <a href="{{landing.link}}">
+            <a target="_blank" href="{{landing.link}}">
             <h3>{{landing.title }}</h3></a>
             <h4>{{landing.comment}}</h4>
             <img  class="images" ng-repeat="image in landing.images"  ng-src="{{image}}"></img>
