@@ -97,7 +97,8 @@ app.controller('MainController', ['$scope', function($scope) {
 	];
 	$scope.landings = [
 	{
-	   	title: 'Dashmote - Goal: snappy, feeling of new, simple & clear info | mobile first, explanations', 
+	   	title: 'Dashmote | snappy, feeling of new, simple & clear info | mobile first, explanations', 
+	   	tag: 'Goal', 
 	    link: 'http://www.dashmote.com/', 
 	    comment: 'Drawbacks old: page: ',
 	    images: ['img/img14.png',
@@ -106,7 +107,8 @@ app.controller('MainController', ['$scope', function($scope) {
 	    
 	}, 
 	{
-	   	title: 'User Stories', 
+	   	title: 'User Stories',
+	   	tag: 'Requirements', 
 	    link: '', 
 	    comment: '',
 	    images: ['img/img16.png',
@@ -166,7 +168,7 @@ app.controller('MainController', ['$scope', function($scope) {
 	},
 	
 	{ 	
-		title: 'The survival kit | introducecue a product through steps undertaken',
+		title: 'The survival kit | introduce a product through steps undertaken',
 		tag: 'Interactive', 
 	    link: 'http://agencysurvivalkit.com/', 
 	    comment: 'hardware into software',
