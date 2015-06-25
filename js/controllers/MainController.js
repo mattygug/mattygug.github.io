@@ -95,4 +95,16 @@ app.controller('MainController', ['$scope', function($scope) {
 	  },
 	  
 	];
+	$scope.landings = [
+	{
+	   title: 'Dashmote - Goal: snappy, feeling of new, simple & clear info | mobile first, explanations', 
+	    link: 'http://www.dashmote.com/', 
+	    comment: 'Drawbacks old: page: ',
+	    images: ['img/img14.png',
+	    		'img/img15.png',
+	    		],
+	    	
+	    
+	  }, ];
+
 }]);
