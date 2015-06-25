@@ -97,7 +97,7 @@ app.controller('MainController', ['$scope', function($scope) {
 	];
 	$scope.landings = [
 	{
-	   title: 'Dashmote - Goal: snappy, feeling of new, simple & clear info | mobile first, explanations', 
+	   	title: 'Dashmote - Goal: snappy, feeling of new, simple & clear info | mobile first, explanations', 
 	    link: 'http://www.dashmote.com/', 
 	    comment: 'Drawbacks old: page: ',
 	    images: ['img/img14.png',
@@ -106,7 +106,7 @@ app.controller('MainController', ['$scope', function($scope) {
 	    
 	}, 
 	{
-	   title: 'User Stories', 
+	   	title: 'User Stories', 
 	    link: '', 
 	    comment: '',
 	    images: ['img/img16.png',
@@ -114,7 +114,8 @@ app.controller('MainController', ['$scope', function($scope) {
 	    
 	},
 	{
-	   title: 'Send a gesture: scrolling and moving of hands can be implemented to explain features | interactive', 
+	   	title: 'Send a gesture | Scrolling and exlpaining', 
+	   	tag: 'Interactive', 
 	    link: 'http://sendamessage.to/', 
 	    comment: 'requires good photography work: ',
 	    images: ['img/img17.png',
@@ -122,8 +123,58 @@ app.controller('MainController', ['$scope', function($scope) {
 	    		],	
 	    
 	},
-
-
+	{ 	
+		title: 'We aint plastic | animating and introducing new words svg animation', 
+		tag: 'Animation', 
+	    link: 'http://weaintplastic.com/', 
+	    comment: 'might not be the best direction for us',
+	    images: ['img/img18.png',
+	    		
+	    		],	
+	    
+	},
+	{ 	
+		title: 'Adoratorio | introduce cinemagraphs instead of pictures', 
+		tag: 'Animation', 
+	    link: 'http://www.adoratorio.com/', 
+	    comment: 'more for the team page and information',
+	    images: ['img/cine.gif',
+	    		
+	    		],	
+	    
+	},
+	{ 	
+		title: 'Kingsman movie | introduce plaful onboarding and introduction, become a superdesigner', 
+		tag: 'Interactive', 
+	    link: 'http://www.kingsmanmovie.com/becomeakingsman/', 
+	    comment: 'marketing needs to help, maybe too time intense',
+	    images: ['img/kingsman.gif',
+	    		
+	    		],	
+	    
+	},
+	
+	{ 	
+		title: 'Millbank | introdcue a product through steps undertaken', 
+		tag: 'Exlpanation', 
+	    link: 'http://www.fsmillbank.com/', 
+	    comment: 'Prezi style not my favourite',
+	    images: ['img/img19.png',
+	    		
+	    		],	
+	    
+	},
+	
+	{ 	
+		title: 'The survival kit | introducecue a product through steps undertaken',
+		tag: 'Interactive', 
+	    link: 'http://agencysurvivalkit.com/', 
+	    comment: 'hardware into software',
+	    images: ['img/img20.png',
+	    		
+	    		],	
+	    
+	},
 	  ];
 
 }]);
