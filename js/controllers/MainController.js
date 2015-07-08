@@ -180,7 +180,7 @@ app.controller('MainController', ['$scope', function($scope) {
 	  ];
 	$scope.instas = [
 	{
-	   	title: 'Freunde von freunden | target group designers, artists weekly posts', 
+	   	title: 'Freunde von Freunden', 
 	   	tag: 'follow', 
 	    link: 'https://instagram.com/fvonf/', 
 	    comment: 'good style, good target group',
