@@ -178,5 +178,28 @@ app.controller('MainController', ['$scope', function($scope) {
 	    
 	},
 	  ];
+	$scope.instas = [
+	{
+	   	title: 'Freunde von freunden | target group designers, artists weekly posts', 
+	   	tag: 'follow', 
+	    link: 'https://instagram.com/fvonf/', 
+	    comment: 'good style, good target group',
+	    images: ['img/img14.png',
+	    		'img/img15.png',
+	    		],	
+	    
+	},
+	{
+	   	title: 'oliviahird', 
+	   	tag: 'style', 
+	    link: 'https://instagram.com/oliviahird/', 
+	    comment: 'good style',
+	    images: ['img/img14.png',
+	    		
+	    		],	
+	    
+	},  
+	
+	  ];
 
 }]);
