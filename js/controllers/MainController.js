@@ -184,8 +184,8 @@ app.controller('MainController', ['$scope', function($scope) {
 	   	tag: 'follow', 
 	    link: 'https://instagram.com/fvonf/', 
 	    comment: 'good style, good target group',
-	    images: ['img/img14.png',
-	    		'img/img15.png',
+	    images: ['img/img21.png',
+	    		'img/img22.png',
 	    		],	
 	    
 	},
@@ -194,11 +194,73 @@ app.controller('MainController', ['$scope', function($scope) {
 	   	tag: 'style', 
 	    link: 'https://instagram.com/oliviahird/', 
 	    comment: 'good style',
-	    images: ['img/img14.png',
+	    images: ['img/img24.png',
+	    		
+	    		],	
+	    
+	},
+	{
+	   	title: 'thingsorganizedneatly', 
+	   	tag: 'style', 
+	    link: 'https://instagram.com/thingsorganizedneatly/', 
+	    comment: 'good style',
+	    images: ['img/img25.png',
+	    'img/img26.png',
 	    		
 	    		],	
 	    
 	},  
+	
+	{
+	   	title: 'miatilio', 
+	   	tag: 'style', 
+	    link: 'https://instagram.com/myatilio/', 
+	    comment: 'good style',
+	    images: ['img/img28.png',
+	    		
+	    		],	
+	    
+	},  
+	{
+	   	title: 'jungvonmattsthlm', 
+	   	tag: 'agency', 
+	    link: 'https://instagram.com/jungvonmattsthlm/', 
+	    comment: 'agency, follower base is neat',
+	    images: ['img/img32.png',
+	    		
+	    		],	
+	    
+	},  
+	{
+	   	title: 'iarchitectures', 
+	   	tag: 'source', 
+	    link: 'https://instagram.com/iarchitectures/', 
+	    comment: 'follower base need the same for webdesigners',
+	    images: ['img/img29.png',
+	    		
+	    		],	
+	    
+	},
+	{
+	   	title: 'vanschneider', 
+	   	tag: 'designer', 
+	    link: 'https://instagram.com/vanschneider/', 
+	    comment: 'follower base, style designers, folower base',
+	    images: ['img/img30.png',
+	    		
+	    		],	
+	    
+	},
+	{
+	   	title: 'designmilk', 
+	   	tag: 'source', 
+	    link: 'https://instagram.com/designmilk/', 
+	    comment: 'follower base, style',
+	    images: ['img/img31.png',
+	    		
+	    		],	
+	    
+	},       
 	
 	  ];
 
