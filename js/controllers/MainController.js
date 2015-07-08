@@ -245,7 +245,7 @@ app.controller('MainController', ['$scope', function($scope) {
 	   	title: 'vanschneider', 
 	   	tag: 'designer', 
 	    link: 'https://instagram.com/vanschneider/', 
-	    comment: 'follower base, style designers, folower base',
+	    comment: 'follower base, style designers, follower base',
 	    images: ['img/img30.png',
 	    		
 	    		],	
@@ -261,7 +261,47 @@ app.controller('MainController', ['$scope', function($scope) {
 	    		],	
 	    
 	},       
+	{
+	   	title: 'wild', 
+	   	tag: 'agency', 
+	    link: 'https://instagram.com/madebywild/', 
+	    comment: 'style, target group, source for more little designers',
+	    images: ['img/img33.png',
+	    		
+	    		],	
+	    
+	},
+	{
+	   	title: 'example of a webdesigner', 
+	   	tag: 'webdesigner', 
+	    link: 'https://instagram.com/madebywild/', 
+	    comment: 'pictures to like when scrolling through hashtags',
+	    images: ['img/img34.png',
+	    		
+	    		],	
+	    
+	},
 	
+	{
+	   	title: 'alex banga', 
+	   	tag: 'webdesigner', 
+	    link: 'https://instagram.com/alexbanaga/', 
+	    comment: 'pictures to like when scrolling through hashtags',
+	    images: ['img/img36.png',
+	    		
+	    		],	
+	    
+	},
+	{
+	   	title: 'wes in the wild', 
+	   	tag: 'webdesigner', 
+	    link: 'https://instagram.com/wesinthewild/', 
+	    comment: 'pictures to like when scrolling through hashtags',
+	    images: ['img/img35.png',
+	    		
+	    		],	
+	    
+	},
 	  ];
 
 }]);
