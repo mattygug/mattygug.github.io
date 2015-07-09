@@ -303,5 +303,64 @@ app.controller('MainController', ['$scope', function($scope) {
 	    
 	},
 	  ];
+	$scope.fbs = [
+	{
+	   	title: 'Lithuanians Web enthusiasts', 
+	   	tag: 'group', 
+	    link: 'https://www.facebook.com/groups/webas/permalink/10153644664537018/', 
+	    comment: 'missing',
+	    	
+	    
+	},
+	{
+	   	title: 'Amsterdam Web Designers', 
+	   	tag: 'group', 
+	    link: 'https://www.facebook.com/groups/679861202086642/', 
+	    comment: 'missing',
+	    	
+	    
+	},
+	https://www.facebook.com/WeWork?fref=ts
+	{
+	   	title: 'WeWork', 
+	   	tag: 'co-working', 
+	    link: 'https://www.facebook.com/WeWork?fref=ts', 
+	    comment: 'missing',
+	    	
+	    
+	},
+	{
+	   	title: 'Thinking Hut', 
+	   	tag: 'co-working', 
+	    link: 'https://www.facebook.com/profile.php?id=295415457228255&fref=ts', 
+	    comment: 'missing',
+	    	
+	    
+	},
+	{
+	   	title: 'Build in Amsterdam', 
+	   	tag: 'co-working', 
+	    link: 'https://www.facebook.com/buildinamsterdam?fref=ts', 
+	    comment: 'missing',
+	    	
+	    
+	},
+	{
+	   	title: 'Web-Design-Ledger', 
+	   	tag: 'design related group', 
+	    link: 'https://www.facebook.com/pages/Web-Design-Ledger/119775514709373', 
+	    comment: 'missing',
+	    	
+	    
+	},
+	{
+	   	title: 'Web-Design-Ledger', 
+	   	tag: 'design related group', 
+	    link: 'https://www.facebook.com/designshack?ref=stream', 
+	    comment: 'missing',
+	    	
+	    
+	},
+	  ];
 
 }]);
