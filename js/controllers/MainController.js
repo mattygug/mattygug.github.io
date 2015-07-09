@@ -304,18 +304,19 @@ app.controller('MainController', ['$scope', function($scope) {
 	},
 	  ];
 	$scope.fbs = [
+	
 	{
-	   	title: 'Lithuanians Web enthusiasts', 
+	   	title: 'Amsterdam Web Designers', 
 	   	tag: 'group', 
-	    link: 'https://www.facebook.com/groups/webas/permalink/10153644664537018/', 
+	    link: 'https://www.facebook.com/groups/679861202086642/', 
 	    comment: 'missing',
 	    	
 	    
 	},
 	{
-	   	title: 'Amsterdam Web Designers', 
+	   	title: 'Lithuanian Web enthusiasts', 
 	   	tag: 'group', 
-	    link: 'https://www.facebook.com/groups/679861202086642/', 
+	    link: 'https://www.facebook.com/groups/webas/permalink/10153644664537018/', 
 	    comment: 'missing',
 	    	
 	    
