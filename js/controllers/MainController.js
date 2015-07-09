@@ -320,7 +320,7 @@ app.controller('MainController', ['$scope', function($scope) {
 	    	
 	    
 	},
-	https://www.facebook.com/WeWork?fref=ts
+	
 	{
 	   	title: 'WeWork', 
 	   	tag: 'co-working', 

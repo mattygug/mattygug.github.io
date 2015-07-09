@@ -33,15 +33,15 @@
         </br>
         <h4>Comment on group posts if it has anything to do with finding images. Better not to create your own posts, because referencing does wonders. Also there we can only post with our private accounts - try to keep it as informal as possible, as if someone else showed it to you. Lastly a benefit is that we can use our international setting at the office for our advantage by commenting in different languages in groups with different languages.</h4>
         </br>
-        <a href="https://docs.google.com/spreadsheets/d/1eBXgpxT0v4MMN1ao1wNiF04mihg72rHCQVrfuUxZmvs/edit#gid=10022216"><h4>Doc with our target group lists</h4></a>
+        <a href=""><h4>Doc with our target group lists</h4></a>
 
 
-          <div class="posts" ng-repeat="insta in instas">
-            <a target="_blank" href="{{insta.link}}">
-            <h3>{{insta.title }}</h3></a>
-            <h4>{{insta.comment}}</h4>
-             <div style="background:#053C5E;color: white; border-radius: 5px; width: 150px ;font-size: 18px;height: 35px; padding-left: 15px; padding-top: 5px ">{{insta.tag}}</div>
-            <img  class="images" ng-repeat="image in insta.images"  ng-src="{{image}}"></img>
+          <div class="posts" ng-repeat="fb in fbs">
+            <a target="_blank" href="{{fb.link}}">
+            <h3>{{fb.title }}</h3></a>
+            <h4>{{fb.comment}}</h4>
+             <div style="background:#053C5E;color: white; border-radius: 5px; width: 150px ;font-size: 18px;height: 35px; padding-left: 15px; padding-top: 5px ">{{fb.tag}}</div>
+            <img  class="images" ng-repeat="image in fb.images"  ng-src="{{image}}"></img>
             </div>
               
           </div> 
