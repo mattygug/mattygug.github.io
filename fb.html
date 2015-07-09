@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <!-- Include the AngularJS library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+    
+  </head>
+  <body ng-app="myApp">
+
+    <div class="main" ng-controller="MainController">
+      <div class="container">
+        <div class="row">
+        <h3 style="margin-top: 10vh">Here are some guideline on which directions which should go for with instagram.</h3>
+        <h4>The target audience are webdesigners that engage in modern UI design as well as graphic designers that user picture on a regular basis.</h4>
+        </br>
+        <h4>->The goal is to get a follower base that is actively participating in the online community. So we are looking for people that:</h4>
+        </br>
+        <h4># post a lot</h4>
+        </br>
+        <h4># fit into the target group/possible customers</h4>
+        </br>
+        <h4># have style</h4>
+        </br>
+        <h4># are in our global sphere (nice to have)</h4>
+
+        <h3 style="margin-top: 10vh">How to do that.</h3>
+        <h4>Daily picture liking of good sources + going through the likes of pictures that match our criteria + liking posts of specfic #hastags. </h4>
+        </br>
+        <h4>We are only following really good sources never too much (the main nodes, never follow more than we have followers) that make our life easier for liking and instagram woders.</h4>
+        </br>
+        <h4>Hashtag that match our target group: #creative, #photoshop, #webdesign, #adbe, #branding, #illustrator, #design, #artdirectors, #typography, etc.</h4>
+        </br>
+        <h4>Don't go for the spamy accounts that have #follow4follow and lots of pictures with slogans and crappy pictures. We try to avoid that.</h4>
+        <a href="https://docs.google.com/spreadsheets/d/1eBXgpxT0v4MMN1ao1wNiF04mihg72rHCQVrfuUxZmvs/edit#gid=10022216"><h4>Doc with our target group lists</h4></a>
+
+
+          <div class="posts" ng-repeat="insta in instas">
+            <a target="_blank" href="{{insta.link}}">
+            <h3>{{insta.title }}</h3></a>
+            <h4>{{insta.comment}}</h4>
+             <div style="background:#053C5E;color: white; border-radius: 5px; width: 150px ;font-size: 18px;height: 35px; padding-left: 15px; padding-top: 5px ">{{insta.tag}}</div>
+            <img  class="images" ng-repeat="image in insta.images"  ng-src="{{image}}"></img>
+            </div>
+              
+          </div> 
+        </div>
+      </div>
+       
+    </div>
+  
+
+    <!-- Modules -->
+    <script src="js/app.js"></script>
+
+    <!-- Services -->
+    <script src="js/services/test.js"></script>
+    
+    
+
+    <!-- Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+    
+    <!-- Directives -->
+
+
+  </body>
+</html>
