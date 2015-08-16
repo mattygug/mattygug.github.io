@@ -1,10 +1,14 @@
-var layerBg, layerCheckoutBG, layerCollectionBG, layerDot, layerFilter, layerFilterGroupA, layerIconBuy, layerIconCollection, layerIconMore, layerIconSearch, layerIconSelector, layerIconSettings, layerMenu, layerMenuTriangle, layerMenugray, layerMore, layerMoreText, layerProfile, layerSearchActive, layerSearchActiveA, layerSearchActiveB, layerSearchBG, layerSearchBar, layerSearchFilter, layerSearchFilters, layerSearchInput, pulse, searchin, timemenu, timeselect;
+var layerBg, layerCheckoutBG, layerCollectionBG, layerDot, layerFilter, layerFilterGroupA, layerIconBuy, layerIconCollection, layerIconMore, layerIconSearch, layerIconSelector, layerIconSeparator1, layerIconSeparator2, layerIconSeparator3, layerIconSeparator4, layerIconSeparator5, layerIconSettings, layerMenu, layerMenuTriangle, layerMenugray, layerMore, layerMoreText, layerProfile, layerSearchActive, layerSearchActiveA, layerSearchActiveB, layerSearchBG, layerSearchBar, layerSearchFilter, layerSearchFilters, layerSearchInput, layerShadow, pulse, searchin, timedot, timefilter, timeselect, timeslider;
 
-timeselect = 0.1;
+timeselect = 0.2;
 
-timemenu = 0.4;
+timeslider = 0.4;
 
 searchin = 0.4;
+
+timedot = 0.4;
+
+timefilter = 0.5;
 
 pulse = require("pulse");
 
@@ -29,6 +33,16 @@ layerIconSettings = new Layer;
 layerIconMore = new Layer;
 
 layerIconSelector = new Layer;
+
+layerIconSeparator1 = new Layer;
+
+layerIconSeparator2 = new Layer;
+
+layerIconSeparator3 = new Layer;
+
+layerIconSeparator4 = new Layer;
+
+layerIconSeparator5 = new Layer;
 
 layerSearchBar = new Layer;
 
@@ -59,6 +73,8 @@ layerMore = new Layer;
 layerMoreText = new Layer;
 
 layerDot = new Layer;
+
+layerShadow = new Layer;
 
 layerMenu.index = 10;
 
@@ -100,6 +116,14 @@ layerIconSelector.placeBefore(layerMenu);
 
 layerMenuTriangle.placeBefore(layerIconSelector);
 
+layerIconSeparator1.placeBefore(layerMenu);
+
+layerIconSeparator2.placeBefore(layerMenu);
+
+layerIconSeparator3.placeBefore(layerMenu);
+
+layerIconSeparator4.placeBefore(layerMenu);
+
 layerFilterGroupA.placeBefore(layerFilter);
 
 layerSearchFilter.placeBefore(layerSearchInput);
@@ -125,6 +149,10 @@ layerSearchActive.placeBefore(layerSearchBG);
 layerSearchActiveA.placeBefore(layerSearchActive);
 
 layerSearchActiveB.placeBefore(layerSearchActive);
+
+layerShadow.placeBefore(layerIconSelector);
+
+layerMenuTriangle.placeBefore(layerShadow);
 
 layerBg.backgroundColor = "#ffffff";
 
@@ -216,6 +244,66 @@ layerIconMore.height = 20;
 
 layerIconMore.image = "images/more.svg";
 
+layerIconSeparator1.x = 0;
+
+layerIconSeparator1.y = 50;
+
+layerIconSeparator1.width = 50;
+
+layerIconSeparator1.height = 1;
+
+layerIconSeparator1.opacity = 0.4;
+
+layerIconSeparator1.backgroundColor = "#535e65";
+
+layerIconSeparator2.x = 0;
+
+layerIconSeparator2.y = 100;
+
+layerIconSeparator2.width = 50;
+
+layerIconSeparator2.height = 1;
+
+layerIconSeparator2.opacity = 0.4;
+
+layerIconSeparator2.backgroundColor = "#535e65";
+
+layerIconSeparator3.x = 0;
+
+layerIconSeparator3.y = 150;
+
+layerIconSeparator3.width = 50;
+
+layerIconSeparator3.height = 1;
+
+layerIconSeparator3.opacity = 0.4;
+
+layerIconSeparator3.backgroundColor = "#535e65";
+
+layerIconSeparator4.x = 0;
+
+layerIconSeparator4.y = 200;
+
+layerIconSeparator4.width = 50;
+
+layerIconSeparator4.height = 1;
+
+layerIconSeparator4.opacity = 0.4;
+
+layerIconSeparator4.backgroundColor = "#535e65";
+
+layerIconSeparator5.x = 0;
+
+layerIconSeparator5.y = 750;
+
+layerIconSeparator5.width = 50;
+
+layerIconSeparator5.height = 1;
+
+layerIconSeparator5.opacity = 0.4;
+
+layerIconSeparator5.backgroundColor = "#535e65";
+
 layerIconSelector.x = 0;
 
 layerIconSelector.y = 50;
@@ -224,7 +312,7 @@ layerIconSelector.width = 50;
 
 layerIconSelector.height = 50;
 
-layerIconSelector.backgroundColor = "#126aa4";
+layerIconSelector.backgroundColor = "#0072ff";
 
 layerMenuTriangle.x = 0;
 
@@ -235,6 +323,18 @@ layerMenuTriangle.width = 50;
 layerMenuTriangle.height = 50;
 
 layerMenuTriangle.image = "images/triangle.svg";
+
+layerShadow.x = 0;
+
+layerShadow.y = 0;
+
+layerShadow.width = 50;
+
+layerShadow.height = 800;
+
+layerShadow.image = "images/gradient3.png";
+
+layerShadow.opacity = 0.8;
 
 layerSearchBar.x = 50;
 
@@ -598,72 +698,72 @@ layerDot.states.add({
 
 layerSearchBar.states.animationOptions = {
   curve: "ease-in-out",
-  time: 0.2
+  time: timeslider
 };
 
 layerSearchInput.states.animationOptions = {
   curve: "ease-in-out",
-  time: 0.2
+  time: timeslider
 };
 
 layerSearchBG.states.animationOptions = {
   curve: "ease-in-out",
-  time: 0.2
+  time: timeslider
 };
 
 layerSearchFilter.states.animationOptions = {
   curve: "ease-in-out",
-  time: 0.2
+  time: timefilter
 };
 
 layerSearchFilters.states.animationOptions = {
   curve: "ease-in-out",
-  time: 0.2
+  time: timefilter
 };
 
 layerFilter.states.animationOptions = {
   curve: "ease-in-out",
-  time: 0.2
+  time: timeslider
 };
 
 layerFilterGroupA.states.animationOptions = {
   curve: "ease-in-out",
-  time: 0.2
+  time: timeslider
 };
 
 layerSearchActive.states.animationOptions = {
   curve: "ease-in-out",
-  time: 0.2
+  time: timeslider
 };
 
 layerSearchActiveA.states.animationOptions = {
   curve: "ease-in-out",
-  time: 0.2
+  time: timeslider
 };
 
 layerSearchActiveB.states.animationOptions = {
   curve: "ease-in-out",
-  time: 0.2
+  time: timeslider
 };
 
 layerCollectionBG.states.animationOptions = {
   curve: "ease-in-out",
-  time: 0.2
+  time: timeslider
 };
 
 layerCheckoutBG.states.animationOptions = {
   curve: "ease-in-out",
-  time: 0.2
+  time: timeslider
 };
 
 layerMore.states.animationOptions = {
   curve: "ease-in-out",
-  time: 0.2
+  time: timeselect
 };
 
 layerMoreText.states.animationOptions = {
   curve: "ease-in-out",
-  time: 0.2
+  time: timeselect
 };
 
 layerDot.states.animationOptions = {
@@ -699,7 +799,7 @@ layerIconSearch.on(Events.Click, function() {
       x: 75
     },
     curve: "ease-in-out",
-    time: timeselect
+    time: timedot
   });
 });
 
@@ -720,7 +820,7 @@ layerSearchFilter.on(Events.Click, function() {
       x: 275
     },
     curve: "ease-in-out",
-    time: timeselect
+    time: timedot
   });
 });
 
@@ -741,7 +841,7 @@ layerSearchFilters.on(Events.Click, function() {
       x: 105
     },
     curve: "ease-in-out",
-    time: timeselect
+    time: timedot
   });
 });
 
@@ -755,7 +855,7 @@ layerSearchInput.on(Events.Click, function() {
       x: 15
     },
     curve: "ease-in-out",
-    time: timeselect
+    time: timedot
   });
 });
 
@@ -792,7 +892,7 @@ layerIconCollection.on(Events.Click, function() {
       x: 15
     },
     curve: "ease-in-out",
-    time: timeselect
+    time: timedot
   });
 });
 
@@ -829,7 +929,7 @@ layerIconBuy.on(Events.Click, function() {
       x: 15
     },
     curve: "ease-in-out",
-    time: timeselect
+    time: timedot
   });
 });
 
@@ -841,7 +941,7 @@ layerIconMore.on(Events.MouseOver, function() {
       opacity: 0
     },
     curve: "ease-in-out",
-    time: timeselect
+    time: timedot
   });
 });
 
