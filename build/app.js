@@ -1,10 +1,12 @@
-var layerBg, layerCheckoutBG, layerCollectionBG, layerFilter, layerFilterGroupA, layerIconBuy, layerIconCollection, layerIconMore, layerIconSearch, layerIconSelector, layerIconSettings, layerMenu, layerMenuTriangle, layerMenugray, layerMore, layerMoreText, layerProfile, layerSearchActive, layerSearchActiveA, layerSearchActiveB, layerSearchBG, layerSearchBar, layerSearchFilter, layerSearchInput, searchin, timemenu, timeselect;
+var layerBg, layerCheckoutBG, layerCollectionBG, layerDot, layerFilter, layerFilterGroupA, layerIconBuy, layerIconCollection, layerIconMore, layerIconSearch, layerIconSelector, layerIconSettings, layerMenu, layerMenuTriangle, layerMenugray, layerMore, layerMoreText, layerProfile, layerSearchActive, layerSearchActiveA, layerSearchActiveB, layerSearchBG, layerSearchBar, layerSearchFilter, layerSearchFilters, layerSearchInput, pulse, searchin, timemenu, timeselect;
 
 timeselect = 0.1;
 
 timemenu = 0.4;
 
 searchin = 0.4;
+
+pulse = require("pulse");
 
 layerBg = new Layer;
 
@@ -36,6 +38,8 @@ layerSearchBG = new Layer;
 
 layerSearchFilter = new Layer;
 
+layerSearchFilters = new Layer;
+
 layerSearchActive = new Layer;
 
 layerSearchActiveA = new Layer;
@@ -53,6 +57,8 @@ layerCheckoutBG = new Layer;
 layerMore = new Layer;
 
 layerMoreText = new Layer;
+
+layerDot = new Layer;
 
 layerMenu.index = 10;
 
@@ -97,6 +103,8 @@ layerMenuTriangle.placeBefore(layerIconSelector);
 layerFilterGroupA.placeBefore(layerFilter);
 
 layerSearchFilter.placeBefore(layerSearchInput);
+
+layerSearchFilters.placeBefore(layerSearchInput);
 
 layerMore.placeBefore(layerCollectionBG);
 
@@ -264,9 +272,21 @@ layerSearchFilter.width = 15;
 
 layerSearchFilter.height = 15;
 
+layerSearchFilter.opacity = 0;
+
 layerSearchFilter.image = "images/filter.svg";
 
-layerSearchFilter.opacity = 0;
+layerSearchFilters.x = 270;
+
+layerSearchFilters.y = 18;
+
+layerSearchFilters.width = 15;
+
+layerSearchFilters.height = 15;
+
+layerSearchFilters.opacity = 0;
+
+layerSearchFilters.image = "images/filter.svg";
 
 layerSearchBG.x = 50;
 
@@ -382,12 +402,26 @@ layerMoreText.height = 50;
 
 layerMoreText.image = "images/more.png";
 
+layerDot.y = 75;
+
+layerDot.x = 25;
+
+layerDot.width = 0;
+
+layerDot.height = 0;
+
+layerDot.clip = false;
+
+layerDot.borderRadius = 25;
+
+layerDot.backgroundColor = "transparent";
+
 layerSearchBar.states.add({
   one: {
     opacity: 0
   },
   two: {
-    opacity: 100,
+    opacity: 1,
     y: 0,
     x: 50
   },
@@ -401,7 +435,7 @@ layerSearchInput.states.add({
     opacity: 0
   },
   two: {
-    opacity: 100,
+    opacity: 1,
     y: 12,
     x: 100
   },
@@ -415,7 +449,7 @@ layerSearchBG.states.add({
     opacity: 0
   },
   two: {
-    opacity: 100,
+    opacity: 1,
     y: 50,
     x: 50
   },
@@ -425,16 +459,20 @@ layerSearchBG.states.add({
 });
 
 layerSearchFilter.states.add({
-  one: {
+  hidden: {
     opacity: 0
   },
-  two: {
-    opacity: 100,
-    y: 18,
-    x: 70
+  visible: {
+    opacity: 1
+  }
+});
+
+layerSearchFilters.states.add({
+  hidden: {
+    opacity: 0
   },
-  three: {
-    x: 270
+  visible: {
+    opacity: 1
   }
 });
 
@@ -469,10 +507,10 @@ layerSearchActive.states.add({
   visible: {
     opacity: 0.8
   },
-  two: {
+  one: {
     x: 50
   },
-  three: {
+  two: {
     x: 250
   }
 });
@@ -484,10 +522,10 @@ layerSearchActiveA.states.add({
   visible: {
     opacity: 1
   },
-  two: {
+  one: {
     x: 50
   },
-  three: {
+  two: {
     x: 250
   }
 });
@@ -499,10 +537,10 @@ layerSearchActiveB.states.add({
   visible: {
     opacity: 1
   },
-  two: {
+  one: {
     x: 50
   },
-  three: {
+  two: {
     x: 250
   }
 });
@@ -543,6 +581,21 @@ layerMoreText.states.add({
   }
 });
 
+layerDot.states.add({
+  one: {
+    x: 275,
+    y: 25
+  },
+  two: {
+    x: 75,
+    y: 25
+  },
+  three: {
+    x: 175,
+    y: 25
+  }
+});
+
 layerSearchBar.states.animationOptions = {
   curve: "ease-in-out",
   time: 0.2
@@ -559,6 +612,11 @@ layerSearchBG.states.animationOptions = {
 };
 
 layerSearchFilter.states.animationOptions = {
+  curve: "ease-in-out",
+  time: 0.2
+};
+
+layerSearchFilters.states.animationOptions = {
   curve: "ease-in-out",
   time: 0.2
 };
@@ -608,11 +666,17 @@ layerMoreText.states.animationOptions = {
   time: 0.2
 };
 
+layerDot.states.animationOptions = {
+  curve: "spring(250,25,0)"
+};
+
+pulse.createPulse(layerDot);
+
 layerIconSearch.on(Events.Click, function() {
   layerSearchBar.states["switch"]("two");
   layerSearchInput.states["switch"]("two");
   layerSearchBG.states["switch"]("two");
-  layerSearchFilter.states["switch"]("two");
+  layerSearchFilter.states["switch"]("visible");
   layerCheckoutBG.states["switch"]("one");
   layerCollectionBG.states["switch"]("one");
   layerIconSelector.animate({
@@ -622,9 +686,17 @@ layerIconSearch.on(Events.Click, function() {
     curve: "ease-in-out",
     time: timeselect
   });
-  return layerMenuTriangle.animate({
+  layerMenuTriangle.animate({
     properties: {
       y: 50
+    },
+    curve: "ease-in-out",
+    time: timeselect
+  });
+  return layerDot.animate({
+    properties: {
+      y: 18,
+      x: 75
     },
     curve: "ease-in-out",
     time: timeselect
@@ -632,21 +704,59 @@ layerIconSearch.on(Events.Click, function() {
 });
 
 layerSearchFilter.on(Events.Click, function() {
-  layerSearchBar.states.next("two", "three");
-  layerSearchInput.states.next("two", "three");
-  layerSearchBG.states.next("two", "three");
-  layerSearchFilter.states.next("two", "three");
-  layerSearchActive.states.next("three", "two");
-  layerSearchActiveA.states.next("three", "two");
-  layerSearchActiveB.states.next("three", "two");
-  layerFilter.states.next("two");
-  return layerFilterGroupA.states.next("two");
+  layerSearchBar.states["switch"]("three");
+  layerSearchInput.states["switch"]("three");
+  layerSearchBG.states["switch"]("three");
+  layerSearchFilter.states["switch"]("hidden");
+  layerSearchFilters.states["switch"]("visible");
+  layerSearchActive.states["switch"]("two");
+  layerSearchActiveA.states["switch"]("two");
+  layerSearchActiveB.states["switch"]("two");
+  layerFilter.states["switch"]("two");
+  layerFilterGroupA.states["switch"]("two");
+  return layerDot.animate({
+    properties: {
+      y: 18,
+      x: 275
+    },
+    curve: "ease-in-out",
+    time: timeselect
+  });
+});
+
+layerSearchFilters.on(Events.Click, function() {
+  layerSearchBar.states["switch"]("two");
+  layerSearchInput.states["switch"]("two");
+  layerSearchBG.states["switch"]("two");
+  layerSearchFilters.states["switch"]("hidden");
+  layerSearchFilter.states["switch"]("visible");
+  layerSearchActive.states["switch"]("one");
+  layerSearchActiveA.states["switch"]("one");
+  layerSearchActiveB.states["switch"]("one");
+  layerFilter.states["switch"]("one");
+  layerFilterGroupA.states["switch"]("one");
+  return layerDot.animate({
+    properties: {
+      y: 18,
+      x: 105
+    },
+    curve: "ease-in-out",
+    time: timeselect
+  });
 });
 
 layerSearchInput.on(Events.Click, function() {
-  layerSearchActive.states.next("hidden", "visible");
-  layerSearchActiveA.states.next("hidden", "visible");
-  return layerSearchActiveB.states.next("hidden", "visible");
+  layerSearchActive.states.next("visible", "hidden");
+  layerSearchActiveA.states.next("visible", "hidden");
+  layerSearchActiveB.states.next("visible", "hidden");
+  return layerDot.animate({
+    properties: {
+      y: 125,
+      x: 15
+    },
+    curve: "ease-in-out",
+    time: timeselect
+  });
 });
 
 layerIconCollection.on(Events.Click, function() {
@@ -654,10 +764,14 @@ layerIconCollection.on(Events.Click, function() {
   layerSearchBar.states.next("one");
   layerSearchInput.states.next("one");
   layerSearchBG.states.next("one");
-  layerSearchFilter.states.next("one");
+  layerSearchFilter.states.next("hidden");
+  layerSearchFilters.states.next("hidden");
   layerFilter.states["switch"]("one");
   layerFilterGroupA.states["switch"]("one");
   layerCheckoutBG.states["switch"]("one");
+  layerSearchActive.states["switch"]("hidden");
+  layerSearchActiveA.states["switch"]("hidden");
+  layerSearchActiveB.states["switch"]("hidden");
   layerIconSelector.animate({
     properties: {
       y: 100
@@ -665,9 +779,17 @@ layerIconCollection.on(Events.Click, function() {
     curve: "ease-in-out",
     time: timeselect
   });
-  return layerMenuTriangle.animate({
+  layerMenuTriangle.animate({
     properties: {
       y: 100
+    },
+    curve: "ease-in-out",
+    time: timeselect
+  });
+  return layerDot.animate({
+    properties: {
+      y: 175,
+      x: 15
     },
     curve: "ease-in-out",
     time: timeselect
@@ -679,10 +801,14 @@ layerIconBuy.on(Events.Click, function() {
   layerCollectionBG.states["switch"]("one");
   layerSearchBar.states.next("one");
   layerSearchInput.states.next("one");
-  layerSearchFilter.states.next("one");
+  layerSearchFilter.states.next("hidden");
+  layerSearchFilters.states.next("hidden");
   layerSearchBG.states.next("one");
   layerFilter.states["switch"]("one");
   layerFilterGroupA.states["switch"]("one");
+  layerSearchActive.states["switch"]("hidden");
+  layerSearchActiveA.states["switch"]("hidden");
+  layerSearchActiveB.states["switch"]("hidden");
   layerIconSelector.animate({
     properties: {
       y: 150
@@ -690,9 +816,17 @@ layerIconBuy.on(Events.Click, function() {
     curve: "ease-in-out",
     time: timeselect
   });
-  return layerMenuTriangle.animate({
+  layerMenuTriangle.animate({
     properties: {
       y: 150
+    },
+    curve: "ease-in-out",
+    time: timeselect
+  });
+  return layerDot.animate({
+    properties: {
+      y: 775,
+      x: 15
     },
     curve: "ease-in-out",
     time: timeselect
@@ -701,7 +835,14 @@ layerIconBuy.on(Events.Click, function() {
 
 layerIconMore.on(Events.MouseOver, function() {
   layerMore.states.next("two", "one");
-  return layerMoreText.states.next("two", "one");
+  layerMoreText.states.next("two", "one");
+  return layerDot.animate({
+    properties: {
+      opacity: 0
+    },
+    curve: "ease-in-out",
+    time: timeselect
+  });
 });
 
 layerIconMore.on(Events.MouseOut, function() {
