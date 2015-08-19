@@ -1,4 +1,4 @@
-var layerBg, layerCheckoutBG, layerCollectionBG, layerDot, layerFilter, layerFilterGroupA, layerIconBuy, layerIconCollection, layerIconMore, layerIconSearch, layerIconSelector, layerIconSelector2, layerIconSeparator1, layerIconSeparator2, layerIconSeparator3, layerIconSeparator4, layerIconSeparator5, layerIconSettings, layerMenu, layerMenuTriangle, layerMenugray, layerMore, layerMoreText, layerProfile, layerSearchActive, layerSearchActiveA, layerSearchActiveB, layerSearchBG, layerSearchBar, layerSearchFilter, layerSearchFilters, layerSearchInput, pulse, searchin, timedot, timefilter, timeselect, timeslider;
+var layerBg, layerCheckoutBG, layerCollectionBG, layerDot, layerFilter, layerFilterGroupA, layerIconBuy, layerIconCollection, layerIconMore, layerIconSearch, layerIconSelector, layerIconSeparator1, layerIconSeparator2, layerIconSeparator3, layerIconSeparator4, layerIconSeparator5, layerIconSeparator6, layerIconSettings, layerMenu, layerMenuTriangle, layerMenugray, layerMore, layerMoreText, layerProfile, layerSearchActive, layerSearchActiveA, layerSearchActiveB, layerSearchBG, layerSearchBar, layerSearchFilter, layerSearchFilters, layerSearchInput, pulse, searchin, timedot, timefilter, timeselect, timeslider;
 
 timeselect = 0.2;
 
@@ -34,8 +34,6 @@ layerIconMore = new Layer;
 
 layerIconSelector = new Layer;
 
-layerIconSelector2 = new Layer;
-
 layerIconSeparator1 = new Layer;
 
 layerIconSeparator2 = new Layer;
@@ -45,6 +43,8 @@ layerIconSeparator3 = new Layer;
 layerIconSeparator4 = new Layer;
 
 layerIconSeparator5 = new Layer;
+
+layerIconSeparator6 = new Layer;
 
 layerSearchBar = new Layer;
 
@@ -121,10 +121,6 @@ layerMenuTriangle.placeBefore(layerMenugray);
 layerSearchFilter.placeBefore(layerMenu);
 
 layerSearchFilters.placeBefore(layerMenu);
-
-layerSearchFilter.placeBefore(layerIconSelector2);
-
-layerSearchFilters.placeBefore(layerIconSelector2);
 
 layerIconSeparator1.placeBefore(layerMenu);
 
@@ -298,21 +294,21 @@ layerIconSeparator4.opacity = 0.4;
 
 layerIconSeparator4.backgroundColor = "#535e65";
 
+layerIconSeparator6.x = 0;
+
+layerIconSeparator6.y = 650;
+
+layerIconSeparator6.width = 50;
+
+layerIconSeparator6.height = 1;
+
+layerIconSeparator6.opacity = 0.4;
+
+layerIconSeparator6.backgroundColor = "#535e65";
+
 layerIconSeparator5.x = 0;
 
-layerIconSeparator5.y = 650;
-
-layerIconSeparator5.width = 50;
-
-layerIconSeparator5.height = 1;
-
-layerIconSeparator5.opacity = 0.4;
-
-layerIconSeparator5.backgroundColor = "#535e65";
-
-layerIconSeparator5.x = 0;
-
-layerIconSeparator5.y = 100;
+layerIconSeparator5.y = 150;
 
 layerIconSeparator5.width = 50;
 
@@ -331,18 +327,6 @@ layerIconSelector.width = 50;
 layerIconSelector.height = 50;
 
 layerIconSelector.backgroundColor = "#0072ff";
-
-layerIconSelector2.x = 0;
-
-layerIconSelector2.y = 100;
-
-layerIconSelector2.width = 50;
-
-layerIconSelector2.height = 50;
-
-layerIconSelector2.opacity = 0;
-
-layerIconSelector2.backgroundColor = "#0072ff";
 
 layerMenuTriangle.x = 0;
 
@@ -392,7 +376,7 @@ layerSearchFilter.height = 15;
 
 layerSearchFilter.visible = false;
 
-layerSearchFilter.opacity = 0.5;
+layerSearchFilter.opacity = 0.7;
 
 layerSearchFilter.image = "images/filter.svg";
 
@@ -581,19 +565,7 @@ layerIconSeparator5.states.add({
     opacity: 0
   },
   visible: {
-    opacity: 1
-  }
-});
-
-layerIconSelector2.states.add({
-  hidden: {
-    opacity: 0
-  },
-  one: {
     opacity: 0.4
-  },
-  two: {
-    opacity: 0.7
   }
 });
 
@@ -859,7 +831,6 @@ layerIconSearch.on(Events.Click, function() {
   layerSearchBG.states["switch"]("two");
   layerSearchFilter.states["switch"]("visible");
   layerIconSeparator5.states["switch"]("visible");
-  layerIconSelector2.states["switch"]("one");
   layerCheckoutBG.states["switch"]("one");
   layerCollectionBG.states["switch"]("one");
   layerIconCollection.states["switch"]("two");
@@ -897,19 +868,23 @@ layerSearchFilter.on(Events.Click, function() {
   layerSearchFilter.states["switch"]("hidden");
   layerSearchFilters.states["switch"]("visible");
   layerIconSeparator5.states["switch"]("visible");
-  layerIconSelector2.states["switch"]("two");
   layerSearchActive.states["switch"]("two");
   layerSearchActiveA.states["switch"]("two");
   layerSearchActiveB.states["switch"]("two");
   layerFilter.states["switch"]("two");
   layerFilterGroupA.states["switch"]("two");
-  return layerDot.animate({
+  layerDot.animate({
     properties: {
       y: 18,
       x: 275
     },
     curve: "ease-in-out",
     time: timedot
+  });
+  return layerMenuTriangle.animate({
+    properties: {
+      images: "images/triangle.png"
+    }
   });
 });
 
@@ -919,8 +894,6 @@ layerSearchFilters.on(Events.Click, function() {
   layerSearchBG.states["switch"]("two");
   layerSearchFilters.states["switch"]("hidden");
   layerSearchFilter.states["switch"]("visible");
-  layerIconSeparator5.states["switch"]("visible");
-  layerIconSelector2.states["switch"]("one");
   layerSearchActive.states["switch"]("one");
   layerSearchActiveA.states["switch"]("one");
   layerSearchActiveB.states["switch"]("one");
@@ -958,7 +931,6 @@ layerIconCollection.on(Events.Click, function() {
   layerSearchFilter.states["switch"]("hidden");
   layerSearchFilters.states["switch"]("hidden");
   layerIconSeparator5.states["switch"]("hidden");
-  layerIconSelector2.states["switch"]("hidden");
   layerFilter.states["switch"]("one");
   layerFilterGroupA.states["switch"]("one");
   layerCheckoutBG.states["switch"]("one");
@@ -1001,7 +973,6 @@ layerIconBuy.on(Events.Click, function() {
   layerSearchFilter.states["switch"]("hidden");
   layerSearchFilters.states["switch"]("hidden");
   layerIconSeparator5.states["switch"]("hidden");
-  layerIconSelector2.states["switch"]("hidden");
   layerSearchBG.states.next("one");
   layerFilter.states["switch"]("one");
   layerFilterGroupA.states["switch"]("one");
