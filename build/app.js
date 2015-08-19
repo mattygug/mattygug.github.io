@@ -1,4 +1,4 @@
-var layerBg, layerCheckoutBG, layerCollectionBG, layerDot, layerFilter, layerFilterGroupA, layerIconBuy, layerIconCollection, layerIconMore, layerIconSearch, layerIconSelector, layerIconSeparator1, layerIconSeparator2, layerIconSeparator3, layerIconSeparator4, layerIconSeparator5, layerIconSeparator6, layerIconSettings, layerMenu, layerMenuTriangle, layerMenugray, layerMore, layerMoreText, layerProfile, layerSearchActive, layerSearchActiveA, layerSearchActiveB, layerSearchBG, layerSearchBar, layerSearchFilter, layerSearchFilters, layerSearchInput, pulse, searchin, timedot, timefilter, timeselect, timeslider;
+var layerBg, layerCheckoutBG, layerCollectionBG, layerDot, layerFilter, layerFilterGroupA, layerIconBuy, layerIconCollection, layerIconMore, layerIconSearch, layerIconSelector, layerIconSeparator1, layerIconSeparator2, layerIconSeparator3, layerIconSeparator4, layerIconSeparator5, layerIconSeparator6, layerIconSettings, layerMenu, layerMenuTriangle, layerMenuTriangleb, layerMenugray, layerMore, layerMoreText, layerProfile, layerSearchActive, layerSearchActiveA, layerSearchActiveB, layerSearchBG, layerSearchBar, layerSearchFilter, layerSearchFilters, layerSearchInput, pulse, searchin, timedot, timefilter, timeselect, timeslider;
 
 timeselect = 0.2;
 
@@ -19,6 +19,8 @@ layerMenu = new Layer;
 layerMenugray = new Layer;
 
 layerMenuTriangle = new Layer;
+
+layerMenuTriangleb = new Layer;
 
 layerProfile = new Layer;
 
@@ -117,6 +119,8 @@ layerIconSelector.placeBefore(layerMenu);
 layerMenuTriangle.placeBefore(layerIconSelector);
 
 layerMenuTriangle.placeBefore(layerMenugray);
+
+layerMenuTriangleb.placeBefore(layerMenugray);
 
 layerSearchFilter.placeBefore(layerMenu);
 
@@ -337,6 +341,18 @@ layerMenuTriangle.width = 50;
 layerMenuTriangle.height = 50;
 
 layerMenuTriangle.image = "images/triangle_white.png";
+
+layerMenuTriangleb.x = 0;
+
+layerMenuTriangleb.y = 50;
+
+layerMenuTriangleb.width = 50;
+
+layerMenuTriangleb.height = 50;
+
+layerMenuTriangleb.opacity = 0;
+
+layerMenuTriangleb.image = "images/triangle.png";
 
 layerSearchBar.x = 50;
 
@@ -566,6 +582,24 @@ layerIconSeparator5.states.add({
   },
   visible: {
     opacity: 0.4
+  }
+});
+
+layerMenuTriangle.states.add({
+  hidden: {
+    opacity: 0
+  },
+  visible: {
+    opacity: 1
+  }
+});
+
+layerMenuTriangleb.states.add({
+  hidden: {
+    opacity: 0
+  },
+  visible: {
+    opacity: 1
   }
 });
 
@@ -830,6 +864,8 @@ layerIconSearch.on(Events.Click, function() {
   layerSearchInput.states["switch"]("two");
   layerSearchBG.states["switch"]("two");
   layerSearchFilter.states["switch"]("visible");
+  layerMenuTriangle.states["switch"]("visible");
+  layerMenuTriangleb.states["switch"]("hidden");
   layerIconSeparator5.states["switch"]("visible");
   layerCheckoutBG.states["switch"]("one");
   layerCollectionBG.states["switch"]("one");
@@ -868,6 +904,8 @@ layerSearchFilter.on(Events.Click, function() {
   layerSearchFilter.states["switch"]("hidden");
   layerSearchFilters.states["switch"]("visible");
   layerIconSeparator5.states["switch"]("visible");
+  layerMenuTriangle.states["switch"]("hidden");
+  layerMenuTriangleb.states["switch"]("visible");
   layerSearchActive.states["switch"]("two");
   layerSearchActiveA.states["switch"]("two");
   layerSearchActiveB.states["switch"]("two");
@@ -894,6 +932,8 @@ layerSearchFilters.on(Events.Click, function() {
   layerSearchBG.states["switch"]("two");
   layerSearchFilters.states["switch"]("hidden");
   layerSearchFilter.states["switch"]("visible");
+  layerMenuTriangle.states["switch"]("visible");
+  layerMenuTriangleb.states["switch"]("hidden");
   layerSearchActive.states["switch"]("one");
   layerSearchActiveA.states["switch"]("one");
   layerSearchActiveB.states["switch"]("one");
@@ -930,6 +970,8 @@ layerIconCollection.on(Events.Click, function() {
   layerSearchBG.states.next("one");
   layerSearchFilter.states["switch"]("hidden");
   layerSearchFilters.states["switch"]("hidden");
+  layerMenuTriangle.states["switch"]("visible");
+  layerMenuTriangleb.states["switch"]("hidden");
   layerIconSeparator5.states["switch"]("hidden");
   layerFilter.states["switch"]("one");
   layerFilterGroupA.states["switch"]("one");
@@ -972,6 +1014,8 @@ layerIconBuy.on(Events.Click, function() {
   layerSearchInput.states.next("one");
   layerSearchFilter.states["switch"]("hidden");
   layerSearchFilters.states["switch"]("hidden");
+  layerMenuTriangle.states["switch"]("visible");
+  layerMenuTriangleb.states["switch"]("hidden");
   layerIconSeparator5.states["switch"]("hidden");
   layerSearchBG.states.next("one");
   layerFilter.states["switch"]("one");
