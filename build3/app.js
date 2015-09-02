@@ -1,4 +1,4 @@
-var Bg, CheckoutArrows, CheckoutArrows2, CheckoutDetailsPrice1, CheckoutDetailsPrice2, CheckoutDetailsText, CheckoutFooter, CheckoutImage1, CheckoutImage1Details1, CheckoutImage1Details2, CheckoutImage2, CheckoutImageText, CheckoutOverview, CheckoutPaid, CheckoutPriceText, CheckoutSelect, CheckoutSelect2, CheckoutSelectText, CheckoutSelector1, CheckoutSelector11, CheckoutSelector2, CheckoutSelector22, CheckoutSeparator, CheckoutSizeText, CheckoutSizeText2, CheckoutSlash, CheckoutSubtotal, CollectionBG, Dot, Filter, FilterGroupA, IconBuy, IconCollection, IconMore, IconSearch, IconSelector, IconSeparator1, IconSeparator2, IconSeparator3, IconSeparator4, IconSeparator5, IconSeparator6, IconSettings, Menu, MenuTriangle, MenuTriangleb, Menugray, More, MoreCover, MoreText1, MoreText2, MoreText3, Profile, SearchActive, SearchActiveA, SearchActiveB, SearchBG, SearchBar, SearchFilter, SearchFilters, SearchFsAddtocart, SearchFsArrowsLeft, SearchFsArrowsRight, SearchFsBG, SearchFsBG2, SearchFsGotocart, SearchFsImage, SearchFsInfo, SearchFsLicense, SearchFsLicense2, SearchFsLicense3, SearchFsLicensePrice, SearchFsLicensePriceLabel, SearchFsLicenseText, SearchFsLicenseText2, SearchFsLicenseText3, SearchFsMore, SearchFsSelect, SearchFsSeparator, SearchFsText, SearchInput, SearchMouseover, SearchOverlay, checkoutoff, checkouton, collectionoff, collectionon, filteroff, filteron, fsimagemore, fullscreenoff, fullscreenon, imageoff, morebigscreen, moreoff, price1, pulse, searchin, searchoff, searchon, timedot, timefilter, timeselect, timeslider, triangleblack, trianglewhite;
+var Bg, CheckoutAdyen, CheckoutAdyenProceed, CheckoutArrows, CheckoutArrows2, CheckoutBilling, CheckoutBillingProceed, CheckoutDetailsPrice1, CheckoutDetailsPrice2, CheckoutDetailsText, CheckoutDownload, CheckoutFooter, CheckoutGotocart, CheckoutImage1, CheckoutImage1Details1, CheckoutImage1Details2, CheckoutImage2, CheckoutImageText, CheckoutPriceText, CheckoutProgress1, CheckoutProgress2, CheckoutProgress3, CheckoutProgress4, CheckoutSelect, CheckoutSelect2, CheckoutSelectText, CheckoutSelector1, CheckoutSelector11, CheckoutSelector2, CheckoutSelector22, CheckoutSeparator, CheckoutSizeText, CheckoutSizeText2, CollectionBG, Dot, Filter, FilterGroupA, IconBuy, IconCollection, IconMore, IconSearch, IconSelector, IconSeparator1, IconSeparator2, IconSeparator3, IconSeparator4, IconSeparator5, IconSeparator6, IconSettings, Menu, MenuTriangle, MenuTriangleb, Menugray, More, MoreCover, MoreText1, MoreText2, MoreText3, Profile, SearchActive, SearchActiveA, SearchActiveB, SearchBG, SearchBar, SearchFilter, SearchFilters, SearchFsAddtocart, SearchFsArrowsLeft, SearchFsArrowsRight, SearchFsBG, SearchFsBG2, SearchFsGotocart, SearchFsImage, SearchFsInfo, SearchFsLicense, SearchFsLicense2, SearchFsLicense3, SearchFsLicensePrice, SearchFsLicensePriceLabel, SearchFsLicenseText, SearchFsLicenseText2, SearchFsLicenseText3, SearchFsMore, SearchFsSelect, SearchFsSeparator, SearchFsText, SearchInput, SearchMouseover, SearchOverlay, adyenoff, adyenon, billingoff, billingon, checkoutprgressoff, chprogress1on, chprogress2on, chprogress3on, chprogress4on, collectionoff, collectionon, downloadoff, downloadon, filteroff, filteron, fsimagemore, fullscreenoff, fullscreenon, imageoff, morebigscreen, moreoff, price1, pulse, searchin, searchoff, searchon, summaryoff, summaryon, timedot, timefilter, timeselect, timeslider, triangleblack, trianglewhite;
 
 Framer.Device.deviceType = "fullscreen";
 
@@ -490,37 +490,48 @@ SearchActiveB = new Layer({
   image: "images/mycollections.png"
 });
 
-CheckoutOverview = new Layer({
+CheckoutProgress1 = new Layer({
   x: 150,
-  y: 60,
-  width: 1030,
-  height: 50,
+  y: 25,
+  width: 1060,
+  height: 80,
   opacity: 1,
   visible: false,
   backgroundColor: "transparent",
-  html: "<span style='font-family: sans-serif; font-size: 20px'>Unpaid</span>"
+  image: "images/progress1.png"
 });
 
-CheckoutSlash = new Layer({
-  x: 260,
-  y: 60,
-  width: 100,
-  height: 50,
+CheckoutProgress2 = new Layer({
+  x: 150,
+  y: 25,
+  width: 1060,
+  height: 80,
   opacity: 1,
   visible: false,
   backgroundColor: "transparent",
-  html: "<span style='font-family: sans-serif; font-size: 20px'>|</span>"
+  image: "images/progress2.png"
 });
 
-CheckoutPaid = new Layer({
-  x: 300,
-  y: 60,
-  width: 100,
-  height: 50,
+CheckoutProgress3 = new Layer({
+  x: 150,
+  y: 25,
+  width: 1060,
+  height: 80,
   opacity: 1,
   visible: false,
   backgroundColor: "transparent",
-  html: "<span style='font-family: sans-serif; font-size: 20px'>Paid</span>"
+  image: "images/progress3.png"
+});
+
+CheckoutProgress4 = new Layer({
+  x: 150,
+  y: 25,
+  width: 1060,
+  height: 80,
+  opacity: 1,
+  visible: false,
+  backgroundColor: "transparent",
+  image: "images/progress4.png"
 });
 
 CheckoutImageText = new Layer({
@@ -731,10 +742,10 @@ CheckoutSelector22 = new Layer({
 
 CheckoutSeparator = new Layer({
   x: 50,
-  y: 550,
+  y: 535,
   width: 1200,
   height: 2,
-  opacity: 0.6,
+  opacity: 0.4,
   borderRadius: 4,
   visible: false,
   backgroundColor: "#000000"
@@ -742,22 +753,71 @@ CheckoutSeparator = new Layer({
 
 CheckoutFooter = new Layer({
   x: 50,
-  y: 552,
-  width: 1060,
+  y: 520,
+  width: 1160,
   height: 130,
   visible: false,
-  image: "images/footer.png"
+  image: "images/checkout_footer.png"
 });
 
-CheckoutSubtotal = new Layer({
-  x: 1150,
-  y: 552,
-  width: 100,
-  height: 50,
+CheckoutGotocart = new Layer({
+  x: 1060,
+  y: 660,
+  width: 150,
+  height: 35,
   opacity: 1,
   visible: false,
-  backgroundColor: "transparent",
-  html: price1
+  image: "images/gotocart.png"
+});
+
+CheckoutBilling = new Layer({
+  x: 150,
+  y: 100,
+  width: 1060,
+  height: 400,
+  opacity: 1,
+  visible: false,
+  image: "images/billing.png"
+});
+
+CheckoutBillingProceed = new Layer({
+  x: 1060,
+  y: 450,
+  width: 150,
+  height: 35,
+  opacity: 1,
+  visible: false,
+  image: "images/gotocart.png"
+});
+
+CheckoutAdyen = new Layer({
+  x: 450,
+  y: 100,
+  width: 450,
+  height: 600,
+  opacity: 1,
+  visible: false,
+  image: "images/adyen1.png"
+});
+
+CheckoutAdyenProceed = new Layer({
+  x: 1060,
+  y: 600,
+  width: 150,
+  height: 35,
+  opacity: 1,
+  visible: false,
+  image: "images/gotocart.png"
+});
+
+CheckoutDownload = new Layer({
+  x: 150,
+  y: 100,
+  width: 1000,
+  height: 300,
+  opacity: 1,
+  visible: false,
+  image: "images/past orders.png"
 });
 
 CollectionBG = new Layer({
@@ -819,12 +879,12 @@ MoreText3 = new Layer({
 
 Dot = new Layer({
   x: 25,
-  y: 175,
+  y: 75,
   width: 0,
   height: 0,
   clip: false,
   borderRadius: 25,
-  opacity: 0,
+  opacity: 1,
   backgroundColor: "transparent"
 });
 
@@ -875,6 +935,8 @@ MenuTriangleb.placeBefore(Menugray);
 SearchFilter.placeBefore(Menu);
 
 SearchFilters.placeBefore(Menu);
+
+CheckoutSeparator.placeBefore(CheckoutFooter);
 
 IconSeparator1.placeBefore(Menu);
 
@@ -1445,7 +1507,7 @@ CollectionBG.states.add({
   }
 });
 
-CheckoutOverview.states.add({
+CheckoutProgress1.states.add({
   hidden: {
     visible: false
   },
@@ -1454,7 +1516,7 @@ CheckoutOverview.states.add({
   }
 });
 
-CheckoutSlash.states.add({
+CheckoutProgress2.states.add({
   hidden: {
     visible: false
   },
@@ -1463,7 +1525,16 @@ CheckoutSlash.states.add({
   }
 });
 
-CheckoutPaid.states.add({
+CheckoutProgress3.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutProgress4.states.add({
   hidden: {
     visible: false
   },
@@ -1661,7 +1732,7 @@ CheckoutSeparator.states.add({
   }
 });
 
-CheckoutSubtotal.states.add({
+CheckoutFooter.states.add({
   hidden: {
     visible: false
   },
@@ -1670,7 +1741,52 @@ CheckoutSubtotal.states.add({
   }
 });
 
-CheckoutFooter.states.add({
+CheckoutGotocart.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutBilling.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutBillingProceed.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutAdyen.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutAdyenProceed.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutDownload.states.add({
   hidden: {
     visible: false
   },
@@ -1896,8 +2012,20 @@ IconSearch.on(Events.Click, function() {
   trianglewhite();
   searchon();
   collectionoff();
-  checkoutoff();
-  return moreoff();
+  moreoff();
+  summaryoff();
+  billingoff();
+  adyenoff();
+  downloadoff();
+  checkoutprgressoff();
+  return Dot.animate({
+    properties: {
+      x: 320,
+      y: 400
+    },
+    curve: "ease-in-out",
+    time: timedot
+  });
 });
 
 SearchFilter.on(Events.Click, function() {
@@ -1929,7 +2057,11 @@ IconCollection.on(Events.Click, function() {
   searchoff();
   trianglewhite();
   collectionon();
-  return checkoutoff();
+  summaryoff();
+  billingoff();
+  adyenoff();
+  downloadoff();
+  return checkoutprgressoff();
 });
 
 IconBuy.on(Events.Click, function() {
@@ -1937,7 +2069,8 @@ IconBuy.on(Events.Click, function() {
   searchoff();
   collectionoff();
   trianglewhite();
-  checkouton();
+  summaryon();
+  chprogress1on();
   return CollectionBG.states["switch"]("one");
 });
 
@@ -1946,7 +2079,11 @@ IconMore.on(Events.Click, function() {
   searchoff();
   searchoff();
   collectionoff();
-  return checkoutoff();
+  summaryoff();
+  billingoff();
+  adyenoff();
+  downloadoff();
+  return checkoutprgressoff();
 });
 
 searchon = function() {
@@ -2081,10 +2218,8 @@ collectionoff = function() {
   return CollectionBG.states["switch"]("one");
 };
 
-checkouton = function() {
-  CheckoutOverview.states["switch"]("visible");
-  CheckoutSlash.states["switch"]("visible");
-  CheckoutPaid.states["switch"]("visible");
+summaryon = function() {
+  CheckoutProgress1.states["switch"]("visible");
   CheckoutImageText.states["switch"]("visible");
   CheckoutDetailsText.states["switch"]("visible");
   CheckoutSelectText.states["switch"]("visible");
@@ -2107,7 +2242,7 @@ checkouton = function() {
   CheckoutSelector22.states["switch"]("visible");
   CheckoutSeparator.states["switch"]("visible");
   CheckoutFooter.states["switch"]("visible");
-  CheckoutSubtotal.states["switch"]("visible");
+  CheckoutGotocart.states["switch"]("visible");
   IconSelector.animate({
     properties: {
       y: 150
@@ -2132,10 +2267,7 @@ checkouton = function() {
   });
 };
 
-checkoutoff = function() {
-  CheckoutOverview.states["switch"]("hidden");
-  CheckoutSlash.states["switch"]("hidden");
-  CheckoutPaid.states["switch"]("hidden");
+summaryoff = function() {
   CheckoutImageText.states["switch"]("hidden");
   CheckoutDetailsText.states["switch"]("hidden");
   CheckoutSelectText.states["switch"]("hidden");
@@ -2158,7 +2290,33 @@ checkoutoff = function() {
   CheckoutSelector22.states["switch"]("hidden");
   CheckoutSeparator.states["switch"]("hidden");
   CheckoutFooter.states["switch"]("hidden");
-  return CheckoutSubtotal.states["switch"]("hidden");
+  return CheckoutGotocart.states["switch"]("hidden");
+};
+
+chprogress1on = function() {
+  return CheckoutProgress1.states["switch"]("visible");
+};
+
+chprogress2on = function() {
+  CheckoutProgress1.states["switch"]("hidden");
+  return CheckoutProgress2.states["switch"]("visible");
+};
+
+chprogress3on = function() {
+  CheckoutProgress2.states["switch"]("hidden");
+  return CheckoutProgress3.states["switch"]("visible");
+};
+
+chprogress4on = function() {
+  CheckoutProgress3.states["switch"]("hidden");
+  return CheckoutProgress4.states["switch"]("visible");
+};
+
+checkoutprgressoff = function() {
+  CheckoutProgress1.states["switch"]("hidden");
+  CheckoutProgress2.states["switch"]("hidden");
+  CheckoutProgress3.states["switch"]("hidden");
+  return CheckoutProgress4.states["switch"]("hidden");
 };
 
 trianglewhite = function() {
@@ -2200,7 +2358,15 @@ CheckoutSelector1.on(Events.Click, function() {
 CheckoutSelector22.on(Events.Click, function() {
   CheckoutSizeText2.states.next("one", "two", "three");
   CheckoutDetailsPrice2.states.next("one", "two", "three");
-  return CheckoutSelect2.states.next("one", "two", "three");
+  CheckoutSelect2.states.next("one", "two", "three");
+  return Dot.animate({
+    properties: {
+      x: 1140,
+      y: 667
+    },
+    curve: "ease-in-out",
+    time: timedot
+  });
 });
 
 CheckoutSelector11.on(Events.Click, function() {
@@ -2210,7 +2376,15 @@ CheckoutSelector11.on(Events.Click, function() {
 });
 
 SearchFsMore.on(Events.Click, function() {
-  return fsimagemore();
+  fsimagemore();
+  return Dot.animate({
+    properties: {
+      x: 1120,
+      y: 240
+    },
+    curve: "ease-in-out",
+    time: timedot
+  });
 });
 
 Profile.on(Events.Click, function() {
@@ -2292,6 +2466,75 @@ fullscreenoff = function() {
   return SearchOverlay.states["switch"]("hidden");
 };
 
+billingon = function() {
+  CheckoutBilling.states["switch"]("visible");
+  return CheckoutBillingProceed.states["switch"]("visible");
+};
+
+billingoff = function() {
+  CheckoutBilling.states["switch"]("hidden");
+  return CheckoutBillingProceed.states["switch"]("hidden");
+};
+
+CheckoutGotocart.on(Events.Click, function() {
+  summaryoff();
+  billingon();
+  chprogress2on();
+  return Dot.animate({
+    properties: {
+      x: 1130,
+      y: 460
+    },
+    curve: "ease-in-out",
+    time: timedot
+  });
+});
+
+adyenon = function() {
+  CheckoutAdyen.states["switch"]("visible");
+  return CheckoutAdyenProceed.states["switch"]("visible");
+};
+
+adyenoff = function() {
+  CheckoutAdyen.states["switch"]("hidden");
+  return CheckoutAdyenProceed.states["switch"]("hidden");
+};
+
+CheckoutBillingProceed.on(Events.Click, function() {
+  billingoff();
+  adyenon();
+  chprogress3on();
+  return Dot.animate({
+    properties: {
+      x: 1130,
+      y: 600
+    },
+    curve: "ease-in-out",
+    time: timedot
+  });
+});
+
+downloadon = function() {
+  return CheckoutDownload.states["switch"]("visible");
+};
+
+downloadoff = function() {
+  return CheckoutDownload.states["switch"]("hidden");
+};
+
+CheckoutAdyenProceed.on(Events.Click, function() {
+  adyenoff();
+  downloadon();
+  chprogress4on();
+  return Dot.animate({
+    properties: {
+      opacity: 0
+    },
+    curve: "ease-in-out",
+    time: timedot
+  });
+});
+
 SearchFsGotocart.on(Events.MouseOver, function() {
   return SearchFsGotocart.states["switch"]("active");
 });
@@ -2302,12 +2545,39 @@ SearchFsGotocart.on(Events.MouseOut, function() {
 
 SearchFsArrowsRight.on(Events.Click, function() {
   SearchFsText.states.next("one", "two", "three");
-  return SearchFsLicensePrice.states.next("one", "two", "three");
+  SearchFsLicensePrice.states.next("one", "two", "three");
+  return Dot.animate({
+    properties: {
+      x: 1060,
+      y: 340
+    },
+    curve: "ease-in-out",
+    time: timedot
+  });
 });
 
 SearchFsArrowsLeft.on(Events.Click, function() {
   SearchFsText.states.next("three", "two", "one");
   return SearchFsLicensePrice.states.next("three", "two", "one");
+});
+
+SearchFsGotocart.on(Events.Click, function() {
+  moreoff();
+  searchoff();
+  fullscreenoff();
+  collectionoff();
+  trianglewhite();
+  summaryon();
+  chprogress1on();
+  CollectionBG.states["switch"]("one");
+  return Dot.animate({
+    properties: {
+      x: 999,
+      y: 354
+    },
+    curve: "ease-in-out",
+    time: timedot
+  });
 });
 
 SearchFsAddtocart.on(Events.MouseOver, function() {
@@ -2331,5 +2601,13 @@ SearchOverlay.on(Events.Click, function() {
 });
 
 SearchMouseover.on(Events.Click, function() {
-  return fullscreenon();
+  fullscreenon();
+  return Dot.animate({
+    properties: {
+      x: 1000,
+      y: 80
+    },
+    curve: "ease-in-out",
+    time: timedot
+  });
 });
