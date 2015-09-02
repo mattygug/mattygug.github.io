@@ -1,4 +1,4 @@
-var Bg, CheckoutArrows, CheckoutArrows2, CheckoutDetailsPrice1, CheckoutDetailsPrice2, CheckoutDetailsText, CheckoutImage1, CheckoutImage1Details1, CheckoutImage1Details2, CheckoutImage2, CheckoutImageText, CheckoutOverview, CheckoutPaid, CheckoutSelect, CheckoutSelect2, CheckoutSelector1, CheckoutSelector11, CheckoutSelector2, CheckoutSelector22, CheckoutSeparator, CheckoutSizeText, CheckoutSizeText2, CheckoutSlash, CheckoutSubtotal, CollectionBG, Dot, Filter, FilterGroupA, HoverHelp, HoverHelp2, HoverHelp3, HoverHelp4, HoverImage, HoverImage2, HoverImage3, HoverImage4, HoverInfo, HoverInfo2, HoverInfo3, HoverInfo4, IconBuy, IconCollection, IconMore, IconSearch, IconSelector, IconSeparator1, IconSeparator2, IconSeparator3, IconSeparator4, IconSeparator5, IconSeparator6, IconSettings, Menu, MenuTriangle, MenuTriangleb, Menugray, More, MoreCover, MoreText1, MoreText2, MoreText3, Profile, SearchActive, SearchActiveA, SearchActiveB, SearchBG, SearchBar, SearchFilter, SearchFilters, SearchInput, checkoutoff, checkouton, collectionoff, collectionon, filteroff, filteron, morebigscreen, moreoff, price1, pulse, searchin, searchoff, searchon, timedot, timefilter, timeselect, timeslider, triangleblack, trianglewhite;
+var Bg, CheckoutArrows, CheckoutArrows2, CheckoutDetailsPrice1, CheckoutDetailsPrice2, CheckoutDetailsText, CheckoutFooter, CheckoutImage1, CheckoutImage1Details1, CheckoutImage1Details2, CheckoutImage2, CheckoutImageText, CheckoutOverview, CheckoutPaid, CheckoutPriceText, CheckoutSelect, CheckoutSelect2, CheckoutSelectText, CheckoutSelector1, CheckoutSelector11, CheckoutSelector2, CheckoutSelector22, CheckoutSeparator, CheckoutSizeText, CheckoutSizeText2, CheckoutSlash, CheckoutSubtotal, CollectionBG, Dot, Filter, FilterGroupA, IconBuy, IconCollection, IconMore, IconSearch, IconSelector, IconSeparator1, IconSeparator2, IconSeparator3, IconSeparator4, IconSeparator5, IconSeparator6, IconSettings, Menu, MenuTriangle, MenuTriangleb, Menugray, More, MoreCover, MoreText1, MoreText2, MoreText3, Profile, SearchActive, SearchActiveA, SearchActiveB, SearchBG, SearchBar, SearchFilter, SearchFilters, SearchFsAddtocart, SearchFsArrowsLeft, SearchFsArrowsRight, SearchFsBG, SearchFsBG2, SearchFsGotocart, SearchFsImage, SearchFsInfo, SearchFsLicense, SearchFsLicense2, SearchFsLicense3, SearchFsLicensePrice, SearchFsLicensePriceLabel, SearchFsLicenseText, SearchFsLicenseText2, SearchFsLicenseText3, SearchFsMore, SearchFsSelect, SearchFsSeparator, SearchFsText, SearchInput, SearchMouseover, SearchOverlay, checkoutoff, checkouton, collectionoff, collectionon, filteroff, filteron, fsimagemore, fullscreenoff, fullscreenon, imageoff, morebigscreen, moreoff, price1, pulse, searchin, searchoff, searchon, timedot, timefilter, timeselect, timeslider, triangleblack, trianglewhite;
 
 Framer.Device.deviceType = "fullscreen";
 
@@ -216,112 +216,234 @@ SearchFilters = new Layer({
   visible: false
 });
 
-HoverInfo = new Layer({
-  x: 544,
-  y: 53,
-  visible: false,
+SearchMouseover = new Layer({
+  x: 299,
+  y: 351,
+  opacity: 1,
   width: 242,
   height: 145,
+  visible: false,
   backgroundColor: "transparent"
 });
 
-HoverImage = new Layer({
-  x: 544,
-  y: 53,
-  opacity: 0,
-  width: 242,
-  height: 145,
-  image: "images/imageinfo.png"
-});
-
-HoverHelp = new Layer({
-  x: 789,
-  y: 53,
-  opacity: 0,
-  width: 242,
-  height: 145,
-  image: "images/number1.png"
-});
-
-HoverInfo2 = new Layer({
-  x: 544,
-  y: 203,
+SearchOverlay = new Layer({
+  x: 50,
+  y: 0,
+  opacity: 0.85,
+  width: 1250,
+  height: 700,
   visible: false,
-  width: 242,
-  height: 145,
+  backgroundColor: "#090909"
+});
+
+SearchFsBG2 = new Layer({
+  x: 709,
+  y: 71,
+  opacity: 1,
+  width: 275,
+  height: 474,
+  visible: false,
+  backgroundColor: "#ffffff"
+});
+
+SearchFsMore = new Layer({
+  x: 984,
+  y: 71,
+  opacity: 1,
+  width: 40,
+  height: 40,
+  visible: false,
+  image: "images/more_fullscreen.png"
+});
+
+SearchFsLicense = new Layer({
+  x: 735,
+  y: 90,
+  width: 30,
+  height: 30,
+  opacity: 1,
+  visible: false,
+  image: "images/check.png"
+});
+
+SearchFsLicenseText = new Layer({
+  x: 785,
+  y: 93,
+  width: 125,
+  height: 50,
+  opacity: 1,
+  visible: false,
+  backgroundColor: "transparent",
+  html: "<span style='font-family: sans-serif; color: #414042; font-size: 18px'>Royalty Free</span>"
+});
+
+SearchFsLicense2 = new Layer({
+  x: 735,
+  y: 130,
+  width: 30,
+  height: 30,
+  opacity: 1,
+  visible: false,
+  image: "images/check.png"
+});
+
+SearchFsLicenseText2 = new Layer({
+  x: 785,
+  y: 133,
+  width: 125,
+  height: 50,
+  opacity: 1,
+  visible: false,
+  backgroundColor: "transparent",
+  html: "<span style='font-family: sans-serif; color: #414042; font-size: 18px'>Worldwide use</span>"
+});
+
+SearchFsLicense3 = new Layer({
+  x: 735,
+  y: 170,
+  width: 30,
+  height: 30,
+  opacity: 1,
+  visible: false,
+  image: "images/uncheck.png"
+});
+
+SearchFsLicenseText3 = new Layer({
+  x: 785,
+  y: 173,
+  width: 125,
+  height: 50,
+  opacity: 1,
+  visible: false,
+  backgroundColor: "transparent",
+  html: "<span style='font-family: sans-serif; color: #414042; font-size: 18px'>All Media</span>"
+});
+
+SearchFsSelect = new Layer({
+  x: 735,
+  y: 225,
+  width: 220,
+  height: 30,
+  opacity: 1,
+  borderRadius: 4,
+  visible: false,
+  borderColor: "#334e5d",
   backgroundColor: "transparent"
 });
 
-HoverImage2 = new Layer({
-  x: 544,
-  y: 203,
-  opacity: 0,
-  width: 242,
-  height: 145,
-  image: "images/imageinfo2.png"
-});
+SearchFsSelect.style["border"] = "2px solid #334e5d";
 
-HoverHelp2 = new Layer({
-  x: 789,
-  y: 203,
-  opacity: 0,
-  width: 242,
-  height: 145,
-  image: "images/number2.png"
-});
-
-HoverInfo3 = new Layer({
-  x: 544,
-  y: 353,
+SearchFsArrowsLeft = new Layer({
+  x: 735,
+  y: 226,
+  width: 30,
+  height: 30,
+  opacity: 1,
   visible: false,
-  width: 242,
-  height: 145,
-  backgroundColor: "transparent"
+  image: "images/arrow_left_tr.png"
 });
 
-HoverImage3 = new Layer({
-  x: 544,
-  y: 353,
-  opacity: 0,
-  width: 242,
-  height: 145,
-  image: "images/imageinfo3.png"
-});
-
-HoverHelp3 = new Layer({
-  x: 789,
-  y: 353,
-  opacity: 0,
-  width: 242,
-  height: 145,
-  image: "images/number3.png"
-});
-
-HoverInfo4 = new Layer({
-  x: 544,
-  y: 501,
+SearchFsArrowsRight = new Layer({
+  x: 927,
+  y: 226,
+  width: 30,
+  height: 30,
+  opacity: 1,
   visible: false,
-  width: 242,
-  height: 145,
-  backgroundColor: "transparent"
+  image: "images/arrow_right_tr.png"
 });
 
-HoverImage4 = new Layer({
-  x: 544,
-  y: 501,
-  opacity: 0,
-  width: 242,
-  height: 145,
-  image: "images/imageinfo4.png"
+SearchFsText = new Layer({
+  x: 805,
+  y: 230,
+  width: 100,
+  height: 50,
+  opacity: 1,
+  visible: false,
+  backgroundColor: "transparent",
+  html: "<span style='font-family: sans-serif; color: #334e5d; font-size: 18px'>500 x 339</span>"
 });
 
-HoverHelp4 = new Layer({
-  x: 789,
-  y: 501,
-  opacity: 0,
-  width: 242,
-  height: 145,
-  image: "images/number4.png"
+SearchFsLicensePriceLabel = new Layer({
+  x: 735,
+  y: 270,
+  width: 125,
+  height: 50,
+  opacity: 1,
+  visible: false,
+  backgroundColor: "transparent",
+  html: "<span style='font-family: sans-serif; color: #414042; font-size: 20px'>Price:</span>"
+});
+
+SearchFsLicensePrice = new Layer({
+  x: 909,
+  y: 270,
+  width: 125,
+  height: 50,
+  opacity: 1,
+  visible: false,
+  backgroundColor: "transparent",
+  html: "<span style='font-family: sans-serif; color: #414042; font-size: 20px'>50 €</span>"
+});
+
+SearchFsGotocart = new Layer({
+  x: 803,
+  y: 320,
+  width: 150,
+  height: 35,
+  opacity: 1,
+  visible: false,
+  image: "images/gotocart.png"
+});
+
+SearchFsAddtocart = new Layer({
+  x: 735,
+  y: 323,
+  width: 31,
+  height: 30,
+  opacity: 0.6,
+  visible: false,
+  image: "images/addtocart3.png"
+});
+
+SearchFsSeparator = new Layer({
+  x: 709,
+  y: 380,
+  height: 2,
+  width: 275,
+  visible: false,
+  opacity: 0.7,
+  backgroundColor: "#414042"
+});
+
+SearchFsInfo = new Layer({
+  x: 715,
+  y: 382,
+  height: 160,
+  width: 275,
+  visible: false,
+  opacity: 0.7,
+  image: "images/info.png"
+});
+
+SearchFsBG = new Layer({
+  x: 276,
+  y: 71,
+  opacity: 1,
+  width: 708,
+  height: 474,
+  visible: false,
+  backgroundColor: "#ffffff"
+});
+
+SearchFsImage = new Layer({
+  x: 280,
+  y: 75,
+  opacity: 1,
+  width: 700,
+  height: 466,
+  visible: false,
+  image: "images/amsterdam1.png"
 });
 
 Filter = new Layer({
@@ -374,6 +496,7 @@ CheckoutOverview = new Layer({
   width: 1030,
   height: 50,
   opacity: 1,
+  visible: false,
   backgroundColor: "transparent",
   html: "<span style='font-family: sans-serif; font-size: 20px'>Unpaid</span>"
 });
@@ -384,6 +507,7 @@ CheckoutSlash = new Layer({
   width: 100,
   height: 50,
   opacity: 1,
+  visible: false,
   backgroundColor: "transparent",
   html: "<span style='font-family: sans-serif; font-size: 20px'>|</span>"
 });
@@ -394,6 +518,7 @@ CheckoutPaid = new Layer({
   width: 100,
   height: 50,
   opacity: 1,
+  visible: false,
   backgroundColor: "transparent",
   html: "<span style='font-family: sans-serif; font-size: 20px'>Paid</span>"
 });
@@ -404,6 +529,7 @@ CheckoutImageText = new Layer({
   width: 100,
   height: 50,
   opacity: 1,
+  visible: false,
   backgroundColor: "transparent",
   html: "<span style='font-family: sans-serif; font-size: 14px'>Images</span>"
 });
@@ -414,26 +540,29 @@ CheckoutDetailsText = new Layer({
   width: 100,
   height: 50,
   opacity: 1,
+  visible: false,
   backgroundColor: "transparent",
   html: "<span style='font-family: sans-serif; font-size: 14px'>Details</span>"
 });
 
-CheckoutDetailsText = new Layer({
+CheckoutSelectText = new Layer({
   x: 750,
   y: 125,
   width: 100,
   height: 50,
   opacity: 1,
+  visible: false,
   backgroundColor: "transparent",
   html: "<span style='font-family: sans-serif; font-size: 14px'>Select</span>"
 });
 
-CheckoutDetailsText = new Layer({
+CheckoutPriceText = new Layer({
   x: 1160,
   y: 125,
   width: 100,
   height: 50,
   opacity: 1,
+  visible: false,
   backgroundColor: "transparent",
   html: "<span style='font-family: sans-serif; font-size: 14px'>Price</span>"
 });
@@ -444,6 +573,7 @@ CheckoutImage1 = new Layer({
   width: 250,
   height: 160,
   opacity: 1,
+  visible: false,
   image: "images/newyork1.png"
 });
 
@@ -453,6 +583,7 @@ CheckoutImage1Details1 = new Layer({
   width: 250,
   height: 120,
   opacity: 1,
+  visible: false,
   image: "images/details.png"
 });
 
@@ -462,6 +593,7 @@ CheckoutImage2 = new Layer({
   width: 250,
   height: 160,
   opacity: 1,
+  visible: false,
   image: "images/newyork2.png"
 });
 
@@ -471,6 +603,7 @@ CheckoutImage1Details2 = new Layer({
   width: 250,
   height: 120,
   opacity: 1,
+  visible: false,
   image: "images/details.png"
 });
 
@@ -480,6 +613,7 @@ CheckoutDetailsPrice1 = new Layer({
   width: 100,
   height: 50,
   opacity: 1,
+  visible: false,
   backgroundColor: "transparent",
   html: "<span style='font-family: sans-serif; font-size: 20px'>50 €</span>"
 });
@@ -490,6 +624,7 @@ CheckoutDetailsPrice2 = new Layer({
   width: 100,
   height: 50,
   opacity: 1,
+  visible: false,
   backgroundColor: "transparent",
   html: "<span style='font-family: sans-serif; font-size: 20px'>50 €</span>"
 });
@@ -501,6 +636,7 @@ CheckoutSelect = new Layer({
   height: 30,
   opacity: 1,
   borderRadius: 4,
+  visible: false,
   backgroundColor: "#334e5d"
 });
 
@@ -510,6 +646,7 @@ CheckoutArrows = new Layer({
   width: 250,
   height: 30,
   opacity: 1,
+  visible: false,
   image: "images/arrows.png"
 });
 
@@ -519,6 +656,7 @@ CheckoutSizeText = new Layer({
   width: 100,
   height: 50,
   opacity: 1,
+  visible: false,
   backgroundColor: "transparent",
   html: "<span style='font-family: sans-serif; color: white; font-size: 18px'>500 x 339</span>"
 });
@@ -530,6 +668,7 @@ CheckoutSelect2 = new Layer({
   height: 30,
   opacity: 1,
   borderRadius: 4,
+  visible: false,
   backgroundColor: "#334e5d"
 });
 
@@ -539,6 +678,7 @@ CheckoutArrows2 = new Layer({
   width: 250,
   height: 30,
   opacity: 1,
+  visible: false,
   image: "images/arrows.png"
 });
 
@@ -548,6 +688,7 @@ CheckoutSizeText2 = new Layer({
   width: 100,
   height: 50,
   opacity: 1,
+  visible: false,
   backgroundColor: "transparent",
   html: "<span style='font-family: sans-serif; color: white; font-size: 18px'>500 x 339</span>"
 });
@@ -557,6 +698,7 @@ CheckoutSelector1 = new Layer({
   y: 150,
   width: 50,
   height: 30,
+  visible: false,
   backgroundColor: "transparent"
 });
 
@@ -565,6 +707,7 @@ CheckoutSelector2 = new Layer({
   y: 150,
   width: 50,
   height: 30,
+  visible: false,
   backgroundColor: "transparent"
 });
 
@@ -573,6 +716,7 @@ CheckoutSelector11 = new Layer({
   y: 350,
   width: 50,
   height: 30,
+  visible: false,
   backgroundColor: "transparent"
 });
 
@@ -581,6 +725,7 @@ CheckoutSelector22 = new Layer({
   y: 350,
   width: 50,
   height: 30,
+  visible: false,
   backgroundColor: "transparent"
 });
 
@@ -591,14 +736,16 @@ CheckoutSeparator = new Layer({
   height: 2,
   opacity: 0.6,
   borderRadius: 4,
+  visible: false,
   backgroundColor: "#000000"
 });
 
-CheckoutSeparator = new Layer({
+CheckoutFooter = new Layer({
   x: 50,
   y: 552,
   width: 1060,
   height: 130,
+  visible: false,
   image: "images/footer.png"
 });
 
@@ -608,6 +755,7 @@ CheckoutSubtotal = new Layer({
   width: 100,
   height: 50,
   opacity: 1,
+  visible: false,
   backgroundColor: "transparent",
   html: price1
 });
@@ -616,7 +764,7 @@ CollectionBG = new Layer({
   x: 50,
   y: 0,
   width: 1200,
-  height: 700,
+  height: 550,
   opacity: 0,
   image: "images/collection.png"
 });
@@ -751,8 +899,6 @@ SearchActive.placeBefore(SearchBG);
 SearchActiveA.placeBefore(SearchActive);
 
 SearchActiveB.placeBefore(SearchActive);
-
-HoverInfo.placeBefore(HoverImage);
 
 IconCollection.states.add({
   one: {
@@ -946,12 +1092,590 @@ SearchActiveB.states.add({
   }
 });
 
+SearchMouseover.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+SearchOverlay.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+SearchFsBG.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  },
+  one: {
+    x: 276
+  },
+  two: {
+    x: 176
+  }
+});
+
+SearchFsBG2.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  },
+  one: {
+    x: 709
+  },
+  two: {
+    x: 884
+  }
+});
+
+SearchFsImage.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  },
+  one: {
+    x: 280
+  },
+  two: {
+    x: 180
+  }
+});
+
+SearchFsMore.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  },
+  one: {
+    x: 984,
+    image: "images/more_fullscreen.png"
+  },
+  two: {
+    x: 1118,
+    image: "images/arrow_left.png"
+  }
+});
+
+SearchFsLicense.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  },
+  one: {
+    x: 735
+  },
+  two: {
+    x: 910
+  }
+});
+
+SearchFsLicenseText.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  },
+  one: {
+    x: 785
+  },
+  two: {
+    x: 960
+  }
+});
+
+SearchFsLicense2.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  },
+  one: {
+    x: 735
+  },
+  two: {
+    x: 910
+  }
+});
+
+SearchFsLicenseText2.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  },
+  one: {
+    x: 785
+  },
+  two: {
+    x: 960
+  }
+});
+
+SearchFsLicense3.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  },
+  one: {
+    x: 735
+  },
+  two: {
+    x: 910
+  }
+});
+
+SearchFsLicenseText3.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  },
+  one: {
+    x: 785
+  },
+  two: {
+    x: 960
+  }
+});
+
+SearchFsSelect.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  },
+  one: {
+    x: 735
+  },
+  two: {
+    x: 910
+  }
+});
+
+SearchFsArrowsLeft.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  },
+  one: {
+    x: 735
+  },
+  two: {
+    x: 910
+  }
+});
+
+SearchFsArrowsRight.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  },
+  one: {
+    x: 927
+  },
+  two: {
+    x: 1102
+  }
+});
+
+SearchFsText.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  },
+  one: {
+    html: "<span style='font-family: sans-serif; color: #334e5d; font-size: 18px'>800 x 450</span>"
+  },
+  two: {
+    html: "<span style='font-family: sans-serif; color: #334e5d; font-size: 18px'>1000 x 678</span>"
+  },
+  three: {
+    html: "<span style='font-family: sans-serif; color: #334e5d; font-size: 18px'>3824 x 2592</span>"
+  },
+  left: {
+    x: 805
+  },
+  right: {
+    x: 980
+  }
+});
+
+SearchFsLicensePriceLabel.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  },
+  one: {
+    x: 735
+  },
+  two: {
+    x: 910
+  }
+});
+
+SearchFsLicensePrice.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  },
+  one: {
+    html: "<span style='font-family: sans-serif; color: #414042; font-size: 20px'>50 €</span>"
+  },
+  two: {
+    html: "<span style='font-family: sans-serif; color: #414042; font-size: 20px'>60 €</span>"
+  },
+  three: {
+    html: "<span style='font-family: sans-serif; color: #414042; font-size: 20px'>70 €</span>"
+  },
+  left: {
+    x: 909
+  },
+  right: {
+    x: 1084
+  }
+});
+
+SearchFsAddtocart.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  },
+  one: {
+    x: 735
+  },
+  two: {
+    x: 910
+  }
+});
+
+SearchFsGotocart.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  },
+  one: {
+    x: 803
+  },
+  two: {
+    x: 978
+  },
+  inactive: {
+    image: "images/gotocart.png"
+  },
+  active: {
+    image: "images/gotocart1.png"
+  }
+});
+
+SearchFsSeparator.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  },
+  one: {
+    x: 709
+  },
+  two: {
+    x: 884
+  }
+});
+
+SearchFsInfo.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  },
+  one: {
+    x: 715
+  },
+  two: {
+    x: 890
+  }
+});
+
 CollectionBG.states.add({
   one: {
     opacity: 0
   },
   two: {
     opacity: 1
+  }
+});
+
+CheckoutOverview.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutSlash.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutPaid.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutImageText.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutDetailsText.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutSelectText.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutPriceText.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutImage1.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutImage1Details1.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutImage2.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutImage1Details2.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutDetailsPrice1.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutDetailsPrice2.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutSelect.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutArrows.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutSizeText.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutSelect2.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutArrows2.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutSizeText2.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutSelector1.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutSelector2.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutSelector11.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutSelector22.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutSeparator.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutSubtotal.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutFooter.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
   }
 });
 
@@ -1079,114 +1803,6 @@ MoreText2.states.add({
 });
 
 MoreText3.states.add({
-  hidden: {
-    opacity: 0
-  },
-  visible: {
-    opacity: 1
-  }
-});
-
-HoverInfo.states.add({
-  hidden: {
-    visible: false
-  },
-  visible: {
-    visible: true
-  }
-});
-
-HoverInfo2.states.add({
-  hidden: {
-    visible: false
-  },
-  visible: {
-    visible: true
-  }
-});
-
-HoverInfo3.states.add({
-  hidden: {
-    visible: false
-  },
-  visible: {
-    visible: true
-  }
-});
-
-HoverInfo4.states.add({
-  hidden: {
-    visible: false
-  },
-  visible: {
-    visible: true
-  }
-});
-
-HoverImage.states.add({
-  hidden: {
-    opacity: 0
-  },
-  visible: {
-    opacity: 1
-  }
-});
-
-HoverHelp.states.add({
-  hidden: {
-    opacity: 0
-  },
-  visible: {
-    opacity: 1
-  }
-});
-
-HoverImage2.states.add({
-  hidden: {
-    opacity: 0
-  },
-  visible: {
-    opacity: 1
-  }
-});
-
-HoverHelp2.states.add({
-  hidden: {
-    opacity: 0
-  },
-  visible: {
-    opacity: 1
-  }
-});
-
-HoverImage3.states.add({
-  hidden: {
-    opacity: 0
-  },
-  visible: {
-    opacity: 1
-  }
-});
-
-HoverHelp3.states.add({
-  hidden: {
-    opacity: 0
-  },
-  visible: {
-    opacity: 1
-  }
-});
-
-HoverImage4.states.add({
-  hidden: {
-    opacity: 0
-  },
-  visible: {
-    opacity: 1
-  }
-});
-
-HoverHelp4.states.add({
   hidden: {
     opacity: 0
   },
@@ -1343,10 +1959,7 @@ searchon = function() {
   IconSeparator3.states["switch"]("two");
   IconBuy.states["switch"]("two");
   IconSeparator4.states["switch"]("two");
-  HoverInfo.states["switch"]("visible");
-  HoverInfo2.states["switch"]("visible");
-  HoverInfo3.states["switch"]("visible");
-  HoverInfo4.states["switch"]("visible");
+  SearchMouseover.states["switch"]("visible");
   IconSelector.animate({
     properties: {
       y: 50
@@ -1386,7 +1999,8 @@ searchoff = function() {
   IconCollection.states["switch"]("one");
   IconSeparator3.states["switch"]("one");
   IconBuy.states["switch"]("one");
-  return IconSeparator4.states["switch"]("one");
+  IconSeparator4.states["switch"]("one");
+  return SearchMouseover.states["switch"]("hidden");
 };
 
 filteron = function() {
@@ -1468,6 +2082,32 @@ collectionoff = function() {
 };
 
 checkouton = function() {
+  CheckoutOverview.states["switch"]("visible");
+  CheckoutSlash.states["switch"]("visible");
+  CheckoutPaid.states["switch"]("visible");
+  CheckoutImageText.states["switch"]("visible");
+  CheckoutDetailsText.states["switch"]("visible");
+  CheckoutSelectText.states["switch"]("visible");
+  CheckoutPriceText.states["switch"]("visible");
+  CheckoutImage1.states["switch"]("visible");
+  CheckoutImage1Details1.states["switch"]("visible");
+  CheckoutImage2.states["switch"]("visible");
+  CheckoutImage1Details2.states["switch"]("visible");
+  CheckoutDetailsPrice1.states["switch"]("visible");
+  CheckoutDetailsPrice2.states["switch"]("visible");
+  CheckoutSelect.states["switch"]("visible");
+  CheckoutArrows.states["switch"]("visible");
+  CheckoutSizeText.states["switch"]("visible");
+  CheckoutSelect2.states["switch"]("visible");
+  CheckoutArrows2.states["switch"]("visible");
+  CheckoutSizeText2.states["switch"]("visible");
+  CheckoutSelector1.states["switch"]("visible");
+  CheckoutSelector2.states["switch"]("visible");
+  CheckoutSelector11.states["switch"]("visible");
+  CheckoutSelector22.states["switch"]("visible");
+  CheckoutSeparator.states["switch"]("visible");
+  CheckoutFooter.states["switch"]("visible");
+  CheckoutSubtotal.states["switch"]("visible");
   IconSelector.animate({
     properties: {
       y: 150
@@ -1492,7 +2132,34 @@ checkouton = function() {
   });
 };
 
-checkoutoff = function() {};
+checkoutoff = function() {
+  CheckoutOverview.states["switch"]("hidden");
+  CheckoutSlash.states["switch"]("hidden");
+  CheckoutPaid.states["switch"]("hidden");
+  CheckoutImageText.states["switch"]("hidden");
+  CheckoutDetailsText.states["switch"]("hidden");
+  CheckoutSelectText.states["switch"]("hidden");
+  CheckoutPriceText.states["switch"]("hidden");
+  CheckoutImage1.states["switch"]("hidden");
+  CheckoutImage1Details1.states["switch"]("hidden");
+  CheckoutImage2.states["switch"]("hidden");
+  CheckoutImage1Details2.states["switch"]("hidden");
+  CheckoutDetailsPrice1.states["switch"]("hidden");
+  CheckoutDetailsPrice2.states["switch"]("hidden");
+  CheckoutSelect.states["switch"]("hidden");
+  CheckoutArrows.states["switch"]("hidden");
+  CheckoutSizeText.states["switch"]("hidden");
+  CheckoutSelect2.states["switch"]("hidden");
+  CheckoutArrows2.states["switch"]("hidden");
+  CheckoutSizeText2.states["switch"]("hidden");
+  CheckoutSelector1.states["switch"]("hidden");
+  CheckoutSelector2.states["switch"]("hidden");
+  CheckoutSelector11.states["switch"]("hidden");
+  CheckoutSelector22.states["switch"]("hidden");
+  CheckoutSeparator.states["switch"]("hidden");
+  CheckoutFooter.states["switch"]("hidden");
+  return CheckoutSubtotal.states["switch"]("hidden");
+};
 
 trianglewhite = function() {
   MenuTriangle.states["switch"]("visible");
@@ -1518,77 +2185,6 @@ moreoff = function() {
   return MoreText3.states["switch"]("hidden");
 };
 
-HoverInfo.on(Events.MouseOver, function() {
-  HoverImage.states["switch"]("visible");
-  HoverHelp.states["switch"]("visible");
-  return Dot.animate({
-    properties: {
-      y: 250,
-      x: 600
-    },
-    curve: "ease-in-out",
-    time: timedot
-  });
-});
-
-HoverInfo.on(Events.MouseOut, function() {
-  HoverImage.states["switch"]("hidden");
-  return HoverHelp.states["switch"]("hidden");
-});
-
-HoverInfo2.on(Events.MouseOver, function() {
-  HoverImage2.states["switch"]("visible");
-  HoverHelp2.states["switch"]("visible");
-  return Dot.animate({
-    properties: {
-      y: 400,
-      x: 600
-    },
-    curve: "ease-in-out",
-    time: timedot
-  });
-});
-
-HoverInfo2.on(Events.MouseOut, function() {
-  HoverImage2.states["switch"]("hidden");
-  return HoverHelp2.states["switch"]("hidden");
-});
-
-HoverInfo3.on(Events.MouseOver, function() {
-  HoverImage3.states["switch"]("visible");
-  HoverHelp3.states["switch"]("visible");
-  return Dot.animate({
-    properties: {
-      y: 550,
-      x: 600
-    },
-    curve: "ease-in-out",
-    time: timedot
-  });
-});
-
-HoverInfo3.on(Events.MouseOut, function() {
-  HoverImage3.states["switch"]("hidden");
-  return HoverHelp3.states["switch"]("hidden");
-});
-
-HoverInfo4.on(Events.MouseOver, function() {
-  HoverImage4.states["switch"]("visible");
-  HoverHelp4.states["switch"]("visible");
-  return Dot.animate({
-    properties: {
-      opacity: 0
-    },
-    curve: "ease-in-out",
-    time: timedot
-  });
-});
-
-HoverInfo4.on(Events.MouseOut, function() {
-  HoverImage4.states["switch"]("hidden");
-  return HoverHelp4.states["switch"]("hidden");
-});
-
 CheckoutSelector2.on(Events.Click, function() {
   CheckoutSizeText.states.next("one", "two", "three");
   CheckoutDetailsPrice1.states.next("one", "two", "three");
@@ -1611,4 +2207,129 @@ CheckoutSelector11.on(Events.Click, function() {
   CheckoutSizeText2.states.next("three", "two", "one");
   CheckoutDetailsPrice2.states.next("three", "two", "one");
   return CheckoutSelect2.states.next("three", "two", "one");
+});
+
+SearchFsMore.on(Events.Click, function() {
+  return fsimagemore();
+});
+
+Profile.on(Events.Click, function() {
+  return fullscreenon();
+});
+
+fsimagemore = function() {
+  SearchFsBG.states.next("two", "one");
+  SearchFsBG2.states.next("two", "one");
+  SearchFsImage.states.next("two", "one");
+  SearchFsMore.states.next("two", "one");
+  SearchFsLicense.states.next("two", "one");
+  SearchFsLicenseText.states.next("two", "one");
+  SearchFsLicense2.states.next("two", "one");
+  SearchFsLicenseText2.states.next("two", "one");
+  SearchFsLicenseText3.states.next("two", "one");
+  SearchFsLicense3.states.next("two", "one");
+  SearchFsSelect.states.next("two", "one");
+  SearchFsArrowsLeft.states.next("two", "one");
+  SearchFsArrowsRight.states.next("two", "one");
+  SearchFsText.states.next("right", "left");
+  SearchFsLicensePriceLabel.states.next("two", "one");
+  SearchFsLicensePrice.states.next("right", "left");
+  SearchFsGotocart.states.next("two", "one");
+  SearchFsAddtocart.states.next("two", "one");
+  SearchFsSeparator.states.next("two", "one");
+  return SearchFsInfo.states.next("two", "one");
+};
+
+imageoff = function() {
+  return SearchFsBG.states["switch"]("hidden");
+};
+
+fullscreenon = function() {
+  SearchFsBG.states["switch"]("visible");
+  SearchFsBG2.states["switch"]("visible");
+  SearchFsImage.states["switch"]("visible");
+  SearchFsMore.states["switch"]("visible");
+  SearchFsLicense.states["switch"]("visible");
+  SearchFsLicenseText.states["switch"]("visible");
+  SearchFsLicense2.states["switch"]("visible");
+  SearchFsLicenseText2.states["switch"]("visible");
+  SearchFsLicenseText3.states["switch"]("visible");
+  SearchFsLicense3.states["switch"]("visible");
+  SearchFsSelect.states["switch"]("visible");
+  SearchFsArrowsLeft.states["switch"]("visible");
+  SearchFsArrowsRight.states["switch"]("visible");
+  SearchFsText.states["switch"]("visible");
+  SearchFsLicensePriceLabel.states["switch"]("visible");
+  SearchFsLicensePrice.states["switch"]("visible");
+  SearchFsGotocart.states["switch"]("visible");
+  SearchFsAddtocart.states["switch"]("visible");
+  SearchFsSeparator.states["switch"]("visible");
+  SearchFsInfo.states["switch"]("visible");
+  return SearchOverlay.states["switch"]("visible");
+};
+
+fullscreenoff = function() {
+  SearchFsBG.states["switch"]("hidden");
+  SearchFsBG2.states["switch"]("hidden");
+  SearchFsImage.states["switch"]("hidden");
+  SearchFsMore.states["switch"]("hidden");
+  SearchFsLicense.states["switch"]("hidden");
+  SearchFsLicenseText.states["switch"]("hidden");
+  SearchFsLicense2.states["switch"]("hidden");
+  SearchFsLicenseText2.states["switch"]("hidden");
+  SearchFsLicenseText3.states["switch"]("hidden");
+  SearchFsLicense3.states["switch"]("hidden");
+  SearchFsSelect.states["switch"]("hidden");
+  SearchFsArrowsLeft.states["switch"]("hidden");
+  SearchFsArrowsRight.states["switch"]("hidden");
+  SearchFsText.states["switch"]("hidden");
+  SearchFsLicensePriceLabel.states["switch"]("hidden");
+  SearchFsLicensePrice.states["switch"]("hidden");
+  SearchFsGotocart.states["switch"]("hidden");
+  SearchFsAddtocart.states["switch"]("hidden");
+  SearchFsSeparator.states["switch"]("hidden");
+  SearchFsInfo.states["switch"]("hidden");
+  return SearchOverlay.states["switch"]("hidden");
+};
+
+SearchFsGotocart.on(Events.MouseOver, function() {
+  return SearchFsGotocart.states["switch"]("active");
+});
+
+SearchFsGotocart.on(Events.MouseOut, function() {
+  return SearchFsGotocart.states["switch"]("inactive");
+});
+
+SearchFsArrowsRight.on(Events.Click, function() {
+  SearchFsText.states.next("one", "two", "three");
+  return SearchFsLicensePrice.states.next("one", "two", "three");
+});
+
+SearchFsArrowsLeft.on(Events.Click, function() {
+  SearchFsText.states.next("three", "two", "one");
+  return SearchFsLicensePrice.states.next("three", "two", "one");
+});
+
+SearchFsAddtocart.on(Events.MouseOver, function() {
+  return SearchFsAddtocart.animate({
+    properties: {
+      opacity: 1
+    }
+  });
+});
+
+SearchFsAddtocart.on(Events.MouseOut, function() {
+  return SearchFsAddtocart.animate({
+    properties: {
+      opacity: 0.6
+    }
+  });
+});
+
+SearchOverlay.on(Events.Click, function() {
+  return fullscreenoff();
+});
+
+SearchMouseover.on(Events.Click, function() {
+  return fullscreenon();
 });
