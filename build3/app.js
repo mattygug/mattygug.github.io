@@ -1,4 +1,4 @@
-var Bg, CheckoutAdyen, CheckoutAdyenProceed, CheckoutArrows, CheckoutArrows2, CheckoutBilling, CheckoutBillingProceed, CheckoutDetailsPrice1, CheckoutDetailsPrice2, CheckoutDetailsText, CheckoutDownload, CheckoutFooter, CheckoutGotocart, CheckoutImage1, CheckoutImage1Details1, CheckoutImage1Details2, CheckoutImage2, CheckoutImageText, CheckoutPriceText, CheckoutProgress1, CheckoutProgress2, CheckoutProgress3, CheckoutProgress4, CheckoutSelect, CheckoutSelect2, CheckoutSelectText, CheckoutSelector1, CheckoutSelector11, CheckoutSelector2, CheckoutSelector22, CheckoutSeparator, CheckoutSizeText, CheckoutSizeText2, CollectionBG, Dot, Filter, FilterGroupA, IconBuy, IconCollection, IconMore, IconSearch, IconSelector, IconSeparator1, IconSeparator2, IconSeparator3, IconSeparator4, IconSeparator5, IconSeparator6, IconSettings, Menu, MenuTriangle, MenuTriangleb, Menugray, More, MoreCover, MoreText1, MoreText2, MoreText3, Profile, SearchActive, SearchActiveA, SearchActiveB, SearchBG, SearchBar, SearchFilter, SearchFilters, SearchFsAddtocart, SearchFsArrowsLeft, SearchFsArrowsRight, SearchFsBG, SearchFsBG2, SearchFsGotocart, SearchFsImage, SearchFsInfo, SearchFsLicense, SearchFsLicense2, SearchFsLicense3, SearchFsLicensePrice, SearchFsLicensePriceLabel, SearchFsLicenseText, SearchFsLicenseText2, SearchFsLicenseText3, SearchFsMore, SearchFsSelect, SearchFsSeparator, SearchFsText, SearchInput, SearchMouseover, SearchOverlay, adyenoff, adyenon, billingoff, billingon, checkoutprgressoff, chprogress1on, chprogress2on, chprogress3on, chprogress4on, collectionoff, collectionon, downloadoff, downloadon, filteroff, filteron, fsimagemore, fullscreenoff, fullscreenon, imageoff, morebigscreen, moreoff, price1, pulse, searchin, searchoff, searchon, summaryoff, summaryon, timedot, timefilter, timeselect, timeslider, triangleblack, trianglewhite;
+var Bg, CheckoutAdyen, CheckoutAdyenBack, CheckoutAdyenProceed, CheckoutArrows, CheckoutArrows2, CheckoutBilling, CheckoutBillingBack, CheckoutBillingProceed, CheckoutDetailsPrice1, CheckoutDetailsPrice2, CheckoutDetailsText, CheckoutDownload, CheckoutDownloadBack, CheckoutFooter, CheckoutGotocart, CheckoutImage1, CheckoutImage1Details1, CheckoutImage1Details2, CheckoutImage2, CheckoutImageText, CheckoutPriceText, CheckoutProgress1, CheckoutProgress2, CheckoutProgress3, CheckoutProgress4, CheckoutSelect, CheckoutSelect2, CheckoutSelectText, CheckoutSelector1, CheckoutSelector11, CheckoutSelector2, CheckoutSelector22, CheckoutSeparator, CheckoutSizeText, CheckoutSizeText2, CheckoutSummaryBack, CollectionBG, Dot, Filter, FilterGroupA, IconBuy, IconCollection, IconMore, IconSearch, IconSelector, IconSeparator1, IconSeparator2, IconSeparator3, IconSeparator4, IconSeparator5, IconSeparator6, IconSettings, Menu, MenuTriangle, MenuTriangleb, Menugray, More, MoreCover, MoreText1, MoreText2, MoreText3, Profile, SearchActive, SearchActiveA, SearchActiveB, SearchBG, SearchBar, SearchBuyOverlay, SearchFilter, SearchFilters, SearchFsAddtocart, SearchFsArrowsLeft, SearchFsArrowsRight, SearchFsBG, SearchFsBG2, SearchFsGotocart, SearchFsImage, SearchFsInfo, SearchFsLicense, SearchFsLicense2, SearchFsLicense3, SearchFsLicensePrice, SearchFsLicensePriceLabel, SearchFsLicenseText, SearchFsLicenseText2, SearchFsLicenseText3, SearchFsMore, SearchFsSelect, SearchFsSeparator, SearchFsText, SearchInput, SearchMouseover, SearchOverlay, adyenoff, adyenon, billingoff, billingon, checkoutprgressoff, chprogress1on, chprogress2on, chprogress3on, chprogress4on, collectionoff, collectionon, downloadoff, downloadon, filteroff, filteron, fsimagemore, fullscreenoff, fullscreenon, imageoff, morebigscreen, moreoff, price1, pulse, searchin, searchoff, searchon, summaryoff, summaryon, timedot, timefilter, timeselect, timeslider, triangleblack, trianglewhite;
 
 Framer.Device.deviceType = "fullscreen";
 
@@ -224,6 +224,16 @@ SearchMouseover = new Layer({
   height: 145,
   visible: false,
   backgroundColor: "transparent"
+});
+
+SearchBuyOverlay = new Layer({
+  x: 299,
+  y: 351,
+  opacity: 1,
+  width: 242,
+  height: 145,
+  visible: false,
+  image: "images/imageinfo2.png"
 });
 
 SearchOverlay = new Layer({
@@ -770,6 +780,16 @@ CheckoutGotocart = new Layer({
   image: "images/gotocart.png"
 });
 
+CheckoutSummaryBack = new Layer({
+  x: 1060,
+  y: 100,
+  width: 150,
+  height: 35,
+  opacity: 1,
+  visible: false,
+  image: "images/stepback.png"
+});
+
 CheckoutBilling = new Layer({
   x: 150,
   y: 100,
@@ -788,6 +808,16 @@ CheckoutBillingProceed = new Layer({
   opacity: 1,
   visible: false,
   image: "images/gotocart.png"
+});
+
+CheckoutBillingBack = new Layer({
+  x: 150,
+  y: 550,
+  width: 150,
+  height: 35,
+  opacity: 1,
+  visible: false,
+  image: "images/stepback.png"
 });
 
 CheckoutAdyen = new Layer({
@@ -810,6 +840,16 @@ CheckoutAdyenProceed = new Layer({
   image: "images/gotocart.png"
 });
 
+CheckoutAdyenBack = new Layer({
+  x: 150,
+  y: 650,
+  width: 150,
+  height: 35,
+  opacity: 1,
+  visible: false,
+  image: "images/stepback.png"
+});
+
 CheckoutDownload = new Layer({
   x: 150,
   y: 100,
@@ -818,6 +858,16 @@ CheckoutDownload = new Layer({
   opacity: 1,
   visible: false,
   image: "images/past orders.png"
+});
+
+CheckoutDownloadBack = new Layer({
+  x: 150,
+  y: 400,
+  width: 150,
+  height: 35,
+  opacity: 1,
+  visible: false,
+  image: "images/stepback.png"
 });
 
 CollectionBG = new Layer({
@@ -1155,6 +1205,15 @@ SearchActiveB.states.add({
 });
 
 SearchMouseover.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+SearchBuyOverlay.states.add({
   hidden: {
     visible: false
   },
@@ -1795,6 +1854,42 @@ CheckoutDownload.states.add({
   }
 });
 
+CheckoutSummaryBack.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutBillingBack.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutAdyenBack.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutDownloadBack.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
 CheckoutSizeText.states.add({
   one: {
     html: "<span style='font-family: sans-serif; color: white; font-size: 18px'>800 x 450</span>"
@@ -2020,7 +2115,7 @@ IconSearch.on(Events.Click, function() {
   checkoutprgressoff();
   return Dot.animate({
     properties: {
-      x: 320,
+      x: 400,
       y: 400
     },
     curve: "ease-in-out",
@@ -2468,12 +2563,14 @@ fullscreenoff = function() {
 
 billingon = function() {
   CheckoutBilling.states["switch"]("visible");
-  return CheckoutBillingProceed.states["switch"]("visible");
+  CheckoutBillingProceed.states["switch"]("visible");
+  return CheckoutBillingBack.states["switch"]("visible");
 };
 
 billingoff = function() {
   CheckoutBilling.states["switch"]("hidden");
-  return CheckoutBillingProceed.states["switch"]("hidden");
+  CheckoutBillingProceed.states["switch"]("hidden");
+  return CheckoutBillingBack.states["switch"]("hidden");
 };
 
 CheckoutGotocart.on(Events.Click, function() {
@@ -2490,14 +2587,21 @@ CheckoutGotocart.on(Events.Click, function() {
   });
 });
 
+CheckoutBillingBack.on(Events.Click, function() {
+  summaryon();
+  return billingoff();
+});
+
 adyenon = function() {
   CheckoutAdyen.states["switch"]("visible");
-  return CheckoutAdyenProceed.states["switch"]("visible");
+  CheckoutAdyenProceed.states["switch"]("visible");
+  return CheckoutAdyenBack.states["switch"]("visible");
 };
 
 adyenoff = function() {
   CheckoutAdyen.states["switch"]("hidden");
-  return CheckoutAdyenProceed.states["switch"]("hidden");
+  CheckoutAdyenProceed.states["switch"]("hidden");
+  return CheckoutAdyenBack.states["switch"]("hidden");
 };
 
 CheckoutBillingProceed.on(Events.Click, function() {
@@ -2514,12 +2618,19 @@ CheckoutBillingProceed.on(Events.Click, function() {
   });
 });
 
+CheckoutAdyenBack.on(Events.Click, function() {
+  adyenoff();
+  return billingon();
+});
+
 downloadon = function() {
-  return CheckoutDownload.states["switch"]("visible");
+  CheckoutDownload.states["switch"]("visible");
+  return CheckoutDownloadBack.states["switch"]("visible");
 };
 
 downloadoff = function() {
-  return CheckoutDownload.states["switch"]("hidden");
+  CheckoutDownload.states["switch"]("hidden");
+  return CheckoutDownloadBack.states["switch"]("hidden");
 };
 
 CheckoutAdyenProceed.on(Events.Click, function() {
@@ -2533,6 +2644,11 @@ CheckoutAdyenProceed.on(Events.Click, function() {
     curve: "ease-in-out",
     time: timedot
   });
+});
+
+CheckoutDownloadBack.on(Events.Click, function() {
+  adyenon();
+  return downloadoff();
 });
 
 SearchFsGotocart.on(Events.MouseOver, function() {
@@ -2598,6 +2714,22 @@ SearchFsAddtocart.on(Events.MouseOut, function() {
 
 SearchOverlay.on(Events.Click, function() {
   return fullscreenoff();
+});
+
+SearchMouseover.on(Events.MouseOver, function() {
+  SearchBuyOverlay.states["switch"]("visible");
+  return Dot.animate({
+    properties: {
+      x: 480,
+      y: 480
+    },
+    curve: "ease-in-out",
+    time: timedot
+  });
+});
+
+SearchMouseover.on(Events.MouseOut, function() {
+  return SearchBuyOverlay.states["switch"]("hidden");
 });
 
 SearchMouseover.on(Events.Click, function() {
