@@ -2389,17 +2389,20 @@ summaryoff = function() {
 };
 
 chprogress1on = function() {
-  return CheckoutProgress1.states["switch"]("visible");
+  CheckoutProgress1.states["switch"]("visible");
+  return CheckoutProgress2.states["switch"]("hidden");
 };
 
 chprogress2on = function() {
   CheckoutProgress1.states["switch"]("hidden");
-  return CheckoutProgress2.states["switch"]("visible");
+  CheckoutProgress2.states["switch"]("visible");
+  return CheckoutProgress3.states["switch"]("hidden");
 };
 
 chprogress3on = function() {
   CheckoutProgress2.states["switch"]("hidden");
-  return CheckoutProgress3.states["switch"]("visible");
+  CheckoutProgress3.states["switch"]("visible");
+  return CheckoutProgress4.states["switch"]("hidden");
 };
 
 chprogress4on = function() {
@@ -2589,7 +2592,8 @@ CheckoutGotocart.on(Events.Click, function() {
 
 CheckoutBillingBack.on(Events.Click, function() {
   summaryon();
-  return billingoff();
+  billingoff();
+  return chprogress1on();
 });
 
 adyenon = function() {
@@ -2620,7 +2624,8 @@ CheckoutBillingProceed.on(Events.Click, function() {
 
 CheckoutAdyenBack.on(Events.Click, function() {
   adyenoff();
-  return billingon();
+  billingon();
+  return chprogress2on();
 });
 
 downloadon = function() {
@@ -2648,7 +2653,8 @@ CheckoutAdyenProceed.on(Events.Click, function() {
 
 CheckoutDownloadBack.on(Events.Click, function() {
   adyenon();
-  return downloadoff();
+  downloadoff();
+  return chprogress3on();
 });
 
 SearchFsGotocart.on(Events.MouseOver, function() {
