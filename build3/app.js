@@ -2411,8 +2411,8 @@ summaryon = function() {
   });
   return Dot.animate({
     properties: {
-      y: 775,
-      x: 15
+      y: 360,
+      x: 990
     },
     curve: "ease-in-out",
     time: timedot
