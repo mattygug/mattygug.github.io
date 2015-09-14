@@ -1,4 +1,4 @@
-var Bg, CheckoutAdyen, CheckoutAdyenBack, CheckoutAdyenProceed, CheckoutArrows, CheckoutArrows2, CheckoutBilling, CheckoutBillingBack, CheckoutBillingProceed, CheckoutDetailsPrice1, CheckoutDetailsPrice2, CheckoutDetailsText, CheckoutDownload, CheckoutDownloadBack, CheckoutFooter, CheckoutGotocart, CheckoutImage1, CheckoutImage1Details1, CheckoutImage1Details2, CheckoutImage2, CheckoutImageText, CheckoutPriceText, CheckoutProgress1, CheckoutProgress2, CheckoutProgress3, CheckoutProgress4, CheckoutSelect, CheckoutSelect2, CheckoutSelectText, CheckoutSelector1, CheckoutSelector11, CheckoutSelector2, CheckoutSelector22, CheckoutSeparator, CheckoutSizeText, CheckoutSizeText2, CheckoutSummaryBack, CollectionBG, Dot, Filter, FilterGroupA, IconBuy, IconCollection, IconMore, IconSearch, IconSelector, IconSeparator1, IconSeparator2, IconSeparator3, IconSeparator4, IconSeparator5, IconSeparator6, IconSettings, Menu, MenuTriangle, MenuTriangleb, Menugray, More, MoreCover, MoreText1, MoreText2, MoreText3, Profile, SearchActive, SearchActiveA, SearchActiveB, SearchBG, SearchBar, SearchBuyOverlay, SearchFilter, SearchFilters, SearchFsAddtocart, SearchFsArrowsLeft, SearchFsArrowsRight, SearchFsBG, SearchFsBG2, SearchFsGotocart, SearchFsImage, SearchFsInfo, SearchFsLicense, SearchFsLicense2, SearchFsLicense3, SearchFsLicensePrice, SearchFsLicensePriceLabel, SearchFsLicenseText, SearchFsLicenseText2, SearchFsLicenseText3, SearchFsMore, SearchFsSelect, SearchFsSeparator, SearchFsText, SearchInput, SearchMouseover, SearchOverlay, adyenoff, adyenon, billingoff, billingon, checkoutprgressoff, chprogress1on, chprogress2on, chprogress3on, chprogress4on, collectionoff, collectionon, downloadoff, downloadon, filteroff, filteron, fsimagemore, fullscreenoff, fullscreenon, imageoff, morebigscreen, moreoff, price1, pulse, searchin, searchoff, searchon, summaryoff, summaryon, timedot, timefilter, timeselect, timeslider, triangleblack, trianglewhite;
+var Bg, CheckoutAdyen, CheckoutAdyenBack, CheckoutAdyenProceed, CheckoutArrows, CheckoutArrows2, CheckoutBilling, CheckoutBillingBack, CheckoutBillingProceed, CheckoutDetailsPrice1, CheckoutDetailsPrice2, CheckoutDetailsText, CheckoutDownload1, CheckoutDownload2, CheckoutDownloadBack, CheckoutDownloadClick1, CheckoutDownloadClick2, CheckoutFooter, CheckoutGotocart, CheckoutImage1, CheckoutImage1Details1, CheckoutImage1Details2, CheckoutImage2, CheckoutImageText, CheckoutPriceText, CheckoutProgress1, CheckoutProgress2, CheckoutProgress3, CheckoutProgress4, CheckoutSelect, CheckoutSelect2, CheckoutSelectText, CheckoutSelector1, CheckoutSelector11, CheckoutSelector2, CheckoutSelector22, CheckoutSeparator, CheckoutSizeText, CheckoutSizeText2, CheckoutSummaryBack, CollectionBG, Dot, Filter, FilterGroupA, IconBuy, IconCollection, IconMore, IconSearch, IconSelector, IconSeparator1, IconSeparator2, IconSeparator3, IconSeparator4, IconSeparator5, IconSeparator6, IconSettings, Menu, MenuTriangle, MenuTriangleb, Menugray, More, MoreCover, MoreText1, MoreText2, MoreText3, Profile, SearchActive, SearchActiveA, SearchActiveB, SearchBG, SearchBar, SearchBuyOverlay, SearchFilter, SearchFilters, SearchFsAddtocart, SearchFsArrowsLeft, SearchFsArrowsRight, SearchFsBG, SearchFsBG2, SearchFsGotocart, SearchFsImage, SearchFsInfo, SearchFsLicense, SearchFsLicense2, SearchFsLicense3, SearchFsLicensePrice, SearchFsLicensePriceLabel, SearchFsLicenseText, SearchFsLicenseText2, SearchFsLicenseText3, SearchFsMore, SearchFsSelect, SearchFsSeparator, SearchFsText, SearchInput, SearchMouseover, SearchOverlay, adyenoff, adyenon, billingoff, billingon, checkoutprgressoff, chprogress1on, chprogress2on, chprogress3on, chprogress4on, collectionoff, collectionon, downloadoff, downloadon, filteroff, filteron, fsimagemore, fullscreenoff, fullscreenon, imageoff, morebigscreen, moreoff, price1, pulse, searchin, searchoff, searchon, summaryoff, summaryon, timedot, timefilter, timeselect, timeslider, triangleblack, trianglewhite;
 
 Framer.Device.deviceType = "fullscreen";
 
@@ -850,19 +850,49 @@ CheckoutAdyenBack = new Layer({
   image: "images/stepback.png"
 });
 
-CheckoutDownload = new Layer({
-  x: 150,
+CheckoutDownload1 = new Layer({
+  x: 60,
   y: 100,
-  width: 1000,
-  height: 300,
+  width: 1272,
+  height: 480,
   opacity: 1,
   visible: false,
-  image: "images/past orders.png"
+  image: "images/final1.png"
+});
+
+CheckoutDownloadClick1 = new Layer({
+  x: 160,
+  y: 180,
+  width: 40,
+  height: 40,
+  opacity: 1,
+  visible: false,
+  backgroundColor: "transparent"
+});
+
+CheckoutDownload2 = new Layer({
+  x: 60,
+  y: 100,
+  width: 1272,
+  height: 480,
+  opacity: 1,
+  visible: false,
+  image: "images/final2.png"
+});
+
+CheckoutDownloadClick2 = new Layer({
+  x: 160,
+  y: 180,
+  width: 40,
+  height: 40,
+  opacity: 1,
+  visible: false,
+  backgroundColor: "transparent"
 });
 
 CheckoutDownloadBack = new Layer({
   x: 150,
-  y: 400,
+  y: 500,
   width: 150,
   height: 35,
   opacity: 1,
@@ -1845,7 +1875,34 @@ CheckoutAdyenProceed.states.add({
   }
 });
 
-CheckoutDownload.states.add({
+CheckoutDownload1.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutDownload2.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutDownloadClick1.states.add({
+  hidden: {
+    visible: false
+  },
+  visible: {
+    visible: true
+  }
+});
+
+CheckoutDownloadClick2.states.add({
   hidden: {
     visible: false
   },
@@ -2629,14 +2686,39 @@ CheckoutAdyenBack.on(Events.Click, function() {
 });
 
 downloadon = function() {
-  CheckoutDownload.states["switch"]("visible");
-  return CheckoutDownloadBack.states["switch"]("visible");
+  CheckoutDownload1.states["switch"]("visible");
+  CheckoutDownloadBack.states["switch"]("visible");
+  return CheckoutDownloadClick1.states["switch"]("visible");
 };
 
 downloadoff = function() {
-  CheckoutDownload.states["switch"]("hidden");
-  return CheckoutDownloadBack.states["switch"]("hidden");
+  CheckoutDownload1.states["switch"]("hidden");
+  CheckoutDownload2.states["switch"]("hidden");
+  CheckoutDownloadBack.states["switch"]("hidden");
+  CheckoutDownloadClick1.states["switch"]("hidden");
+  return CheckoutDownloadClick2.states["switch"]("hidden");
 };
+
+CheckoutDownloadClick1.on(Events.Click, function() {
+  CheckoutDownload2.states["switch"]("visible");
+  CheckoutDownload1.states["switch"]("hidden");
+  CheckoutDownloadClick1.states["switch"]("hidden");
+  return CheckoutDownloadClick2.states["switch"]("visible");
+});
+
+CheckoutDownloadClick2.on(Events.Click, function() {
+  CheckoutDownload2.states["switch"]("hidden");
+  CheckoutDownload1.states["switch"]("visible");
+  CheckoutDownloadClick1.states["switch"]("visible");
+  CheckoutDownloadClick2.states["switch"]("hidden");
+  return Dot.animate({
+    properties: {
+      opacity: 0,
+      curve: "ease-in-out",
+      time: timedot
+    }
+  });
+});
 
 CheckoutAdyenProceed.on(Events.Click, function() {
   adyenoff();
@@ -2644,7 +2726,8 @@ CheckoutAdyenProceed.on(Events.Click, function() {
   chprogress4on();
   return Dot.animate({
     properties: {
-      opacity: 0
+      x: 180,
+      y: 200
     },
     curve: "ease-in-out",
     time: timedot
