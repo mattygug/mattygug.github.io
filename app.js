@@ -14,7 +14,7 @@ welcome = new Layer({
   width: 1200,
   height: 800,
   visible: true,
-  image: "images/_welcome_page.png"
+  image: "https://s3-eu-west-1.amazonaws.com/dashmotelinks/prot/_welcome_page.png"
 });
 
 welcome_click = new Layer({
@@ -32,7 +32,7 @@ input = new Layer({
   width: 1200,
   height: 800,
   visible: false,
-  image: "images/_search.png"
+  image: "https://s3-eu-west-1.amazonaws.com/dashmotelinks/prot/_search.png"
 });
 
 input_click = new Layer({
@@ -50,7 +50,7 @@ search = new Layer({
   width: 1200,
   height: 800,
   visible: false,
-  image: "images/_search_input.png"
+  image: "https://s3-eu-west-1.amazonaws.com/dashmotelinks/prot/_search_input.png"
 });
 
 search_click = new Layer({
@@ -68,7 +68,7 @@ search2 = new Layer({
   width: 1200,
   height: 800,
   visible: false,
-  image: "images/_search_desert.png"
+  image: "https://s3-eu-west-1.amazonaws.com/dashmotelinks/prot/_search_desert.png"
 });
 
 search2_click = new Layer({
@@ -86,7 +86,7 @@ filter = new Layer({
   width: 1200,
   height: 800,
   visible: false,
-  image: "images/_search_filters.png"
+  image: "https://s3-eu-west-1.amazonaws.com/dashmotelinks/prot/_search_filters.png"
 });
 
 filter_click = new Layer({
@@ -104,7 +104,7 @@ enter = new Layer({
   width: 1200,
   height: 800,
   visible: false,
-  image: "images/_search_filter2.png"
+  image: "https://s3-eu-west-1.amazonaws.com/dashmotelinks/prot/_search_filter2.png"
 });
 
 enter_click = new Layer({
@@ -122,7 +122,7 @@ prefull = new Layer({
   width: 1200,
   height: 800,
   visible: false,
-  image: "images/_search.png"
+  image: "https://s3-eu-west-1.amazonaws.com/dashmotelinks/prot/_search.png"
 });
 
 prefull_click = new Layer({
@@ -140,7 +140,7 @@ fullscreen = new Layer({
   width: 1200,
   height: 800,
   visible: false,
-  image: "images/_fullscreen.png"
+  image: "https://s3-eu-west-1.amazonaws.com/dashmotelinks/prot/_fullscreen.png"
 });
 
 fullscreen_click = new Layer({
@@ -158,7 +158,7 @@ fullscreen_cart = new Layer({
   width: 1200,
   height: 800,
   visible: false,
-  image: "images/_fullscreen_add_to_cart.png"
+  image: "https://s3-eu-west-1.amazonaws.com/dashmotelinks/prot/_fullscreen_add_to_cart.png"
 });
 
 fullscreen_cart_click = new Layer({
@@ -176,7 +176,7 @@ cart_overview = new Layer({
   width: 1200,
   height: 800,
   visible: false,
-  image: "images/_cart_overview.png"
+  image: "https://s3-eu-west-1.amazonaws.com/dashmotelinks/prot/_cart_overview.png"
 });
 
 cart_overview_click = new Layer({
@@ -194,7 +194,7 @@ cart_form = new Layer({
   width: 1200,
   height: 800,
   visible: false,
-  image: "images/_cart_form.png"
+  image: "https://s3-eu-west-1.amazonaws.com/dashmotelinks/prot/_cart_form.png"
 });
 
 cart_download_1 = new Layer({
@@ -203,7 +203,7 @@ cart_download_1 = new Layer({
   width: 1200,
   height: 800,
   visible: false,
-  image: "images/_cart_download_1.png"
+  image: "https://s3-eu-west-1.amazonaws.com/dashmotelinks/prot/_cart_download_1.png"
 });
 
 cart_download_2 = new Layer({
@@ -212,7 +212,7 @@ cart_download_2 = new Layer({
   width: 1200,
   height: 800,
   visible: false,
-  image: "images/_cart_download_2.png"
+  image: "https://s3-eu-west-1.amazonaws.com/dashmotelinks/prot/_cart_download_2.png"
 });
 
 cart_menu = new Layer({
@@ -221,7 +221,7 @@ cart_menu = new Layer({
   width: 1200,
   height: 800,
   visible: false,
-  image: "images/_cart_menu.png"
+  image: "https://s3-eu-west-1.amazonaws.com/dashmotelinks/prot/_cart_menu.png"
 });
 
 Dot = new Layer({
