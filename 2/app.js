@@ -1,4 +1,4 @@
-var Dot, bug, end, hover1, hover1_click, hover2, hover2_click, input, input2, pulse, searchpeople, select, timedot, timeselect, welcome, where;
+var Dot, bug, end, hover1, hover1_click, hover2, hover2_click, input, input2, pulse, searchpeople, select, test, timedot, timeselect, welcome, where;
 
 Framer.Device.deviceType = "fullscreen";
 
@@ -8,12 +8,21 @@ timedot = 0.1;
 
 pulse = require('pulse');
 
-welcome = new Layer({
+test = new Layer({
   x: 0,
   y: 0,
   width: 1440,
   height: 1024,
   visible: true,
+  image: "https://s3-eu-west-1.amazonaws.com/dashmotelinks/prot/_test_addtocart.png"
+});
+
+welcome = new Layer({
+  x: 0,
+  y: 0,
+  width: 1440,
+  height: 1024,
+  visible: false,
   image: "https://s3-eu-west-1.amazonaws.com/dashmotelinks/prot/_welcome.png"
 });
 
@@ -32,7 +41,7 @@ input2 = new Layer({
   width: 1440,
   height: 1024,
   visible: false,
-  image: "https://s3-eu-west-1.amazonaws.com/dashmotelinks/prot/_search_collection_notif.png"
+  image: "https://s3-eu-west-1.amazonaws.com/dashmotelinks/prot/_search_addedtocoll.png"
 });
 
 hover1 = new Layer({
@@ -86,7 +95,7 @@ bug = new Layer({
   width: 1440,
   height: 1024,
   visible: false,
-  image: "https://s3-eu-west-1.amazonaws.com/dashmotelinks/prot/_search_addedtocoll.png"
+  image: "https://s3-eu-west-1.amazonaws.com/dashmotelinks/prot/_searchbug.png"
 });
 
 select = new Layer({
@@ -123,11 +132,29 @@ Dot = new Layer({
   height: 0,
   clip: false,
   borderRadius: 25,
-  visible: true,
+  visible: false,
   backgroundColor: "transparent"
 });
 
+test.states.add({
+  visible: {
+    visible: true
+  },
+  hidden: {
+    visible: false
+  }
+});
+
 welcome.states.add({
+  visible: {
+    visible: true
+  },
+  hidden: {
+    visible: false
+  }
+});
+
+Dot.states.add({
   visible: {
     visible: true
   },
@@ -241,6 +268,12 @@ Dot.states.animationOptions = {
 
 pulse.createPulse(Dot);
 
+test.on(Events.Click, function() {
+  welcome.states["switch"]("visible");
+  Dot.states["switch"]("visible");
+  return test.states["switch"]("hidden");
+});
+
 welcome.on(Events.Click, function() {
   welcome.states["switch"]("hidden");
   input.states["switch"]("visible");
@@ -320,7 +353,7 @@ hover2_click.on(Events.Click, function() {
   bug.states["switch"]("visible");
   return Dot.animate({
     properties: {
-      y: 25,
+      y: 140,
       x: 1133
     },
     curve: "ease-in-out"
